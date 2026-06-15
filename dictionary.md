@@ -1,0 +1,1838 @@
+# Codebase Dictionary
+
+Generated for the uploaded code files on 2026-06-08.
+
+Updated on 2026-06-08 to include detailed documentation for `9.py`, `10.py`, `11.py`, and `12.md`.
+
+This dictionary is a static source-code description. The code was inspected as text; the programs were not executed. The purpose of this file is to name each uploaded code file, identify its internal form, describe its functionality, and state its role within the larger generative/configurational system.
+
+## Source File Inventory
+
+| Uploaded file | Lines | Bytes | SHA-256 prefix |
+|---|---:|---:|---|
+| `7.php` | 1,711 | 67,375 | `b48a2a5dc051` |
+| `0.py` | 619 | 19,171 | `e1407673a805` |
+| `6.cpp` | 960 | 31,328 | `5251dc2d6d1f` |
+| `5.cpp` | 387 | 11,789 | `091267f86223` |
+| `4.cpp` | 459 | 14,184 | `4750deee376f` |
+| `8.py` | 5,731 | 287,351 | `fc3b2bf774f6` |
+| `3.c` | 1,073 | 25,230 | `c6555efc3721` |
+| `2.c` | 89 | 2,128 | `1f0ece842890` |
+| `1.c` | 120 | 4,669 | `257c114ae65a` |
+| `9.py` | 1,451 | 51,015 | `51119c229482` |
+| `10.py` | 291 | 9,259 | `4efc142e3cd5` |
+| `11.py` | 371 | 12,424 | `f32f17b33496` |
+| `12.md` | 74 | 25,361 | `c68924fe4298` |
+
+## System-Level Reading
+
+The uploaded files form six related layers:
+
+1. **Permutation and record-generation layer** — `1.c`, `2.c`, `3.c`, `4.cpp`, `5.cpp`, and `6.cpp` generate combinations, source records, or configurable fabric outputs.
+2. **Boolean-function colour encoding layer** — `0.py` gives a canonical truth-table-to-colour system for Boolean logic gates, circuits, and transition machines.
+3. **Interactive command/OS layer** — `7.php` and `8.py` are REPL-oriented systems for n-dimensional fabric analysis and graphical kernel-service control.
+4. **General-dimensional circuit/category/rendering layer** — `9.py` extends accepted-state colour-index tensors into deterministic n-dimensional circuit events, semantic free-category presentations, projections, fabric reports, and optional rendered outputs.
+5. **Documentation bundle and restoration layer** — `10.py` bundles a project tree into `doc/doc.md`, while `11.py` reverses that bundle back into a recoverable file tree where the original text content is embedded.
+6. **Axiomatic conceptual-source layer** — `12.md` supplies a long numeric seed and an axiom set named `The Elements`, giving the philosophical/semantic basis for competence, pain, learning, contradiction, correction, tools, memory, and truth.
+
+The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, and a compact axiom file that supplies conceptual constraints for the wider system.
+
+---
+
+# 1. `7.php`
+
+## Internal Identity
+
+- **Declared/internal name:** `nDCodex.php`
+- **Language:** PHP 8-style CLI script with strict typing.
+- **Primary form:** Command-line REPL with a minimal browser fallback message.
+- **Architectural form:** Object-oriented PHP application composed of mathematical utility classes, text-analysis modules, matching logic, fabric traversal, persistence, and export commands.
+
+## Main Purpose
+
+`7.php` implements an n-dimensional hash-length fabric analysis REPL. Its role is to model relationships between alphabets, hash lengths, dimensional lengths, valid n-dimensional tilings, secondary-system capacity, and pasted text/code analysis.
+
+It is a working command environment rather than a simple library. The user runs it from the terminal, changes configuration keys, analyzes primary/secondary length relations, traverses fabric rows, pastes text for character analysis, ranks matching configurations, applies matches, and saves or exports session state.
+
+## Forms
+
+### Source Form
+
+- Single PHP script.
+- Uses `declare(strict_types=1)`.
+- Refuses direct browser execution as a functional application and instead displays terminal usage instructions.
+- Uses classes rather than loose procedural-only code.
+- Maintains internal configuration state in the REPL instance.
+
+### Mathematical Form
+
+The file encodes a fabric model involving:
+
+- primary alphabet size `p`;
+- secondary alphabet size `h`;
+- secondary length `s`;
+- active dimension `n`;
+- minimum root constraint `min_root`;
+- valid primary lengths `L` satisfying `L = m^n` and `m >= min_root`;
+- capacity comparisons such as `h^s > p^(L-1)`;
+- nearest valid length search;
+- ranked matching of observed text/code against possible alphabet/dimension/length configurations.
+
+### Class Form
+
+The major classes are:
+
+- `BigDec` — decimal-string arithmetic for values that can exceed native integer capacity.
+- `MathUtil` — bounded exponentiation, exact/floor nth-root logic, length validity, nearest valid length, centered integer generation, primary/secondary length comparison.
+- `Fabric` — fabric-row analysis and traversal over valid or candidate lengths.
+- `TextAnalyzer` — text/code character analysis, unique-character counting, preview formatting, and escaping.
+- `MatchEngine` — ranks candidate configurations against pasted input and session constraints.
+- `NDCodex` — the REPL runtime: command parsing, configuration, help/explain system, analysis commands, save/load/export, and prompt loop.
+
+## Functionalities
+
+### REPL Control
+
+The script offers an interactive command loop with grouped command categories:
+
+- **Core:** `help`, `commands`, `explain`, `show`, `set`, `reset`, `quit`, `exit`.
+- **Analysis:** `classify`, `lengths`, `fabric traverse`, `witness`.
+- **Matching:** `paste`, `match`, `match apply`, `match refine`.
+- **Persistence:** `save`, `load`, `export`.
+
+### Configuration Management
+
+The REPL maintains a mutable configuration with keys such as:
+
+- `primary_alphabet`
+- `secondary_alphabet`
+- `secondary_length`
+- `dimension`
+- `min_root`
+- matching/traversal/export-related settings
+
+The `set` command validates updates so alphabet sizes and dimensional parameters remain within valid ranges.
+
+### Dimensional Length Analysis
+
+The file determines whether a primary length is valid under an n-dimensional shape constraint. A length is valid when it is an exact nth power and the root is at least the configured minimum root.
+
+### Fabric Traversal
+
+The `fabric traverse` command enumerates fabric rows and renders charts/tables showing candidate lengths, gaps, exactness, capacity state, and related metrics.
+
+### Witness Generation
+
+The `witness` command produces concrete explanatory evidence for a selected length or configuration relationship. Its purpose is to make abstract validity/capacity conditions inspectable.
+
+### Paste and Match System
+
+The paste system accepts multiline text/code blocks terminated by `.end`. The analysis then derives character length, unique-character count, character preview, and likely matching configurations. `match apply` can mutate the current session by applying a ranked candidate. `match refine` narrows candidate generation.
+
+### Persistence and Export
+
+The script can save and load session state and export analysis data. This makes it suitable for repeatable investigations rather than one-off calculations.
+
+## Purpose in the Codebase
+
+`7.php` is the analytical core for n-dimensional Codex/fabric reasoning. It transforms alphabet and length parameters into a configurable, inspectable REPL system. It can be used as a bridge between raw text/code inputs and formal dimensional configuration analysis.
+
+## Inputs
+
+- Terminal commands.
+- Numeric configuration values.
+- Alphabet-size parameters.
+- Multiline pasted text/code.
+- Saved state files.
+
+## Outputs
+
+- REPL tables and reports.
+- Fabric traversal charts.
+- Match rankings.
+- Export files.
+- Saved session/configuration state.
+
+## Practical Role
+
+Use this file when the goal is to reason about symbolic/code text as a dimensional object: characters become observed structure, alphabets become base systems, and valid lengths become n-dimensional constraints.
+
+---
+
+# 2. `0.py`
+
+## Internal Identity
+
+- **Declared/internal name:** Canonical Truth-Table Colour Encoding, abbreviated **CTCE**.
+- **Language:** Python 3.
+- **Primary form:** Executable Python module/script.
+- **Architectural form:** Functional utilities plus dataclass models for Boolean functions, circuits, and transition machines.
+
+## Main Purpose
+
+`0.py` implements a deterministic mapping from a Boolean function's complete truth-table signature to reproducible colour values. It provides a canonical way to represent primitive gates, arbitrary Boolean functions, composed circuits, and bounded sequential transition systems using truth-table encodings and colours.
+
+The file explicitly distinguishes between:
+
+- the **canonical signature/hash**, which identifies the Boolean behaviour;
+- the **RGB/HEX colour**, which is reproducible but not globally unique for all large Boolean systems because 24-bit RGB has finite capacity.
+
+## Forms
+
+### Source Form
+
+- Python script with `#!/usr/bin/env python3`.
+- Uses `dataclasses`, `hashlib.sha256`, `itertools.product`, and type hints.
+- Contains validation utilities, colour conversion utilities, Boolean function models, circuit models, transition models, and demo/printing helpers.
+
+### Boolean Form
+
+The canonical behaviour is:
+
+```text
+Boolean behaviour -> canonical truth-table bits -> integer/hash -> colour
+```
+
+The canonical input ordering uses lexicographic binary rows:
+
+```text
+n = 2: 00, 01, 10, 11
+n = 3: 000, 001, 010, 011, 100, 101, 110, 111
+```
+
+### Class Form
+
+The main dataclasses/classes are:
+
+- `BooleanFunction` — stores a function name, input count, and truth-table bits; computes IDs, signatures, hashes, direct colours, hash colours, swatches, and table rows.
+- `CircuitNode` — describes an input, gate, or constant node in a combinational circuit.
+- `CombinationalCircuit` — evaluates directed circuit nodes and encodes multi-output circuit truth tables.
+- `TransitionMachine` — encodes bounded sequential state transitions as canonical transition-table bits and colour encodings.
+
+## Functionalities
+
+### Validation
+
+- Converts values to strict Boolean bits.
+- Validates that truth-table strings contain only `0` and `1`.
+- Infers input count from truth-table length when the length is a power of two.
+
+### Colour Encoding
+
+- Converts integers to RGB triples.
+- Converts RGB triples to HEX strings.
+- Hashes arbitrary strings/bytes into reproducible RGB values.
+- Maps truth bits directly into scaled RGB for small truth tables.
+- Maps truth bits into hash-based RGB for large signatures.
+- Produces multi-swatch signatures when a single colour is insufficient.
+
+### Boolean Gate Coverage
+
+The file supports:
+
+- constants;
+- unary gates;
+- all 16 two-input Boolean functions;
+- arbitrary n-input functions;
+- named primitive gates such as `AND`, `OR`, `XOR`, `NAND`, `NOR`, `XNOR`, projections, implications, and negations.
+
+### Combinational Circuit Composition
+
+The circuit system composes gate nodes and named dependencies. It includes constructors for:
+
+- half-adder;
+- full-adder;
+- 2-to-1 multiplexer.
+
+Circuit outputs are encoded by concatenating output bits per canonical input row.
+
+### Sequential Transition Encoding
+
+The transition-machine layer represents bounded state machines by encoding:
+
+```text
+current state bits + input bits -> next state bits + output bits
+```
+
+It includes a T flip-flop example.
+
+### Demo/CLI Behaviour
+
+The `main()` function prints primitive gate tables and example encodings. This makes the file usable as both a module and a demonstrator.
+
+## Purpose in the Codebase
+
+`0.py` is the symbolic-colour layer. It converts complete Boolean behaviour into reproducible visual identifiers. It can be used to colour-code classical logic gates, composed modules, sequential machines, programmable fabrics, and fixed logic devices.
+
+## Inputs
+
+- Boolean callables.
+- Truth-table bit strings.
+- Named primitive gates.
+- Circuit node graphs.
+- Transition functions.
+
+## Outputs
+
+- Canonical signatures.
+- SHA-256 hashes.
+- Function IDs.
+- RGB triples.
+- HEX colour values.
+- Multi-swatch colour signatures.
+- Printed primitive/function descriptions.
+
+## Practical Role
+
+Use this file when the aim is to represent logic behaviour as deterministic colour data. It is suitable for diagrams, gate dictionaries, circuit catalogues, visual programming systems, and combinatorial colour encodings.
+
+---
+
+# 3. `6.cpp`
+
+## Internal Identity
+
+- **Declared/internal name:** `configure_3.cpp`
+- **Language:** C++17.
+- **Primary form:** Command-line generative fabric tool.
+- **Architectural form:** Safe C++ replacement/evolution of the C configurator with object specs, config files, menu input, dry-run planning, bounded execution, and escaped output records.
+
+## Main Purpose
+
+`6.cpp` implements a risk-free C++ generative fabric for `cppdb`. It converts user-specified object definitions into bounded, escaped source records. It supports direct command-line flags, configuration files, sample-config generation, and menu/UI-style prompting.
+
+## Forms
+
+### Source Form
+
+- Single C++17 source file.
+- Uses anonymous namespace for internal linkage.
+- Uses classes for output sinks and file input.
+- Uses explicit structs for options and object specifications.
+- Uses exceptions for validation and runtime errors.
+
+### Data Form
+
+The main data structures are:
+
+- `Flow` — enum class with `cartesian`, `literal`, `repeat`, and `reverse` modes.
+- `ObjectSpec` — runtime object definition including object name, input name, input value, width, flow name, output name, output target, separator, prefix, and suffix.
+- `Options` — execution options such as `execute`, `allow_large`, `all`, `overwrite`, `menu`, `start`, `limit`, config path, and sample-config path.
+- `Program` — holds global options plus a direct object spec.
+
+### I/O Form
+
+- `OutputSink` abstract interface.
+- `StreamSink` for terminal/stdout output.
+- `FileSink` for file output with binary append/write modes.
+- `InputFile` wrapper for config-file line reading.
+- `Writer` wrapper for generic output writing.
+
+## Functionalities
+
+### Input Modes
+
+The file supports exactly one of the major input modes:
+
+- `--config <path>` — load one or more object specs from a config file.
+- `--sample-config <path>` — write a sample config file.
+- `--menu` or `--ui` — prompt interactively for a spec.
+- Direct object flags — define an object from command-line flags.
+
+### Object Flags
+
+Supported object-level flags include:
+
+- `--object-name` / `-n`
+- `--input-name`
+- `--input-value` / `-i`
+- `--input-width` / `-w`
+- `--flow-name`
+- `--flow-type` / `-f`
+- `--output-name`
+- `--output-target` / `-o`
+- `--separator`
+- `--prefix`
+- `--suffix`
+
+### Execution Flags
+
+Supported execution/safety flags include:
+
+- `--start`
+- `--limit`
+- `--all`
+- `--allow-large`
+- `--overwrite`
+- `--execute`
+
+### Flow Generation
+
+The supported generation flows are:
+
+- `cartesian` — generates fixed-width combinations from the input value.
+- `literal` — writes the input value once.
+- `repeat` — repeats the input value according to input width.
+- `reverse` — writes the reversed input value.
+
+### Escaping and Record Safety
+
+The file escapes fields, supports unescaped text inputs such as `\n`, `\t`, and `\r`, validates text length, bounds cartesian width, caps repeat count, and refuses large output unless explicitly allowed.
+
+### Dry Run
+
+Without `--execute`, the tool prints a plan rather than writing records. This makes the generator inspection-first and fail-closed.
+
+## Purpose in the Codebase
+
+`6.cpp` is the most developed C++ configurator in this group. It generalizes earlier fixed permutation generators into a spec-driven record fabric capable of producing stable database-ready records from named object specifications.
+
+## Inputs
+
+- Command-line flags.
+- Config files using key/value object specs and `end` delimiters.
+- Menu prompts.
+- Sample configuration request.
+
+## Outputs
+
+- Escaped `cppdb` source records.
+- Sample config files.
+- Dry-run plans.
+- File or stdout output.
+
+## Practical Role
+
+Use this file as the current C++ fabric generator when configurable named objects, multiple input modes, and safer bounded output are required.
+
+---
+
+# 4. `5.cpp`
+
+## Internal Identity
+
+- **Declared/internal name:** `configure_2.cpp`
+- **Language:** C++17.
+- **Primary form:** Command-line numeric permutation/source-record generator.
+- **Architectural form:** Risk-free C++ replacement for a numeric generator, using sink abstraction, dry-run planning, safety caps, and escaped `cppdb` records.
+
+## Main Purpose
+
+`5.cpp` generates numeric fixed-width records from the digit alphabet `0123456789`. It writes bounded, escaped `cppdb` source records that can serve as stable generated object handles in a CLI/database system.
+
+## Forms
+
+### Source Form
+
+- Single C++17 source file.
+- Anonymous namespace for internal implementation.
+- Explicit `Options` struct.
+- `OutputSink`, `StreamSink`, `FileSink`, and `Writer` classes.
+- Top-level parsing, validation, planning, and output functions.
+
+### Data Form
+
+The main configuration fields are:
+
+- `width` — numeric record width, default 7, maximum 18.
+- `start` — first ordinal to emit.
+- `limit` — maximum records to emit.
+- `all` — emit all records after `start`.
+- `allow_large` — allow more than 100,000 records.
+- `execute` — actually write the output.
+- `overwrite` — permit replacing an existing file.
+- `output_path` — default `x33.cppdb.txt`.
+
+## Functionalities
+
+### Numeric Combination Generation
+
+The generator treats each ordinal as a base-10 fixed-width number and emits the corresponding digit string. For width 7, it can generate records like numeric handles from `0000000` through `9999999`, bounded by start/limit controls.
+
+### Source Record Construction
+
+Each generated numeric value is wrapped as a `cppdb` source record. The file creates stable textual records rather than raw lines only.
+
+### Safety Controls
+
+The file includes:
+
+- overflow-aware exponentiation;
+- max-width validation;
+- default output limit;
+- refusal to emit more than 100,000 records unless `--allow-large` is used;
+- refusal to overwrite output files unless `--overwrite` is used;
+- dry-run plan by default unless `--execute` is supplied.
+
+### CLI Options
+
+Supported options include:
+
+- `--width` / `-w`
+- `--start`
+- `--limit`
+- `--all`
+- `--allow-large`
+- `--output` / `-o`
+- `--overwrite`
+- `--execute`
+- `--help`
+
+## Purpose in the Codebase
+
+`5.cpp` is the numeric-specialized C++ generator. It is narrower than `6.cpp`, but safer and clearer than the earlier C variants. It is useful where generated object handles must be numeric, fixed-width, bounded, escaped, and database-ready.
+
+## Inputs
+
+- Command-line numeric generation parameters.
+
+## Outputs
+
+- Escaped `cppdb` numeric records to file or stdout.
+- Dry-run emission plan.
+
+## Practical Role
+
+Use this file for stable numeric handle generation, especially when the intended alphabet is strictly decimal digits.
+
+---
+
+# 5. `4.cpp`
+
+## Internal Identity
+
+- **Declared/internal name:** `configure_1.cpp`
+- **Language:** C++17.
+- **Primary form:** Command-line broad-character permutation/source-record generator.
+- **Architectural form:** Risk-free C++ replacement for the original broad-character permutation generator.
+
+## Main Purpose
+
+`4.cpp` generates fixed-width combinations over configurable alphabets and emits stable escaped `cppdb` source records. It is broader than `5.cpp` because it supports multiple alphabet choices rather than digits only.
+
+## Forms
+
+### Source Form
+
+- Single C++17 source file.
+- Anonymous namespace.
+- `Options` struct.
+- `OutputSink`, `StreamSink`, `FileSink`, and `Writer` classes.
+- Functional stages for parsing, alphabet selection, escaping, hashing, planning, validation, and output.
+
+### Alphabet Form
+
+The generator supports named alphabets:
+
+- `original`
+- `safe`
+- `digits`
+- `lower`
+
+The `original` alphabet reflects the broad-character heritage of the earlier C generator. The safe/digits/lower options allow narrower controlled generation.
+
+### Record Form
+
+Generated values are escaped and emitted as source records. The file also computes record hashes, allowing deterministic identity for generated records.
+
+## Functionalities
+
+### CLI Options
+
+Supported options include:
+
+- `--width` / `-w` — record width, default 4, maximum 16.
+- `--alphabet` / `-a` — alphabet name.
+- `--start`
+- `--limit`
+- `--all`
+- `--allow-large`
+- `--output` / `-o`
+- `--overwrite`
+- `--execute`
+- `--help`
+
+### Generation
+
+The program enumerates ordinal positions over the selected alphabet and maps each ordinal to a fixed-width character record.
+
+### Safety Controls
+
+The file uses:
+
+- overflow-aware power computation;
+- width limits;
+- output count limits;
+- dry-run mode by default;
+- explicit `--execute` requirement;
+- overwrite protection;
+- escaping of embedded whitespace/newlines.
+
+## Purpose in the Codebase
+
+`4.cpp` is the first safer C++ generalization of the original permutation idea. It is the broad-character counterpart of the numeric-only `5.cpp` and a predecessor to the object-spec configurator in `6.cpp`.
+
+## Inputs
+
+- Command-line alphabet and generation parameters.
+
+## Outputs
+
+- Escaped `cppdb` source records.
+- Dry-run plan.
+- File or stdout output.
+
+## Practical Role
+
+Use this file when the required generated records use a configurable alphabet rather than decimal digits only.
+
+---
+
+# 6. `8.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `Graphical Codex CLI-REPL OS - Tkinter Edition`
+- **Probable runtime filename from docstring:** `graphical_codex_cli_repl_os.py`
+- **Language:** Python 3.
+- **Primary form:** Pure-stdlib Tkinter graphical REPL operating surface.
+- **Architectural form:** Kernel-service manager, command gateway, API router, codex graph editor, terminal bridge, Configure4 authoring system, and quadtree desktop surface.
+
+## Main Purpose
+
+`8.py` implements a graphical Codex CLI-REPL OS where services are controlled only through commands submitted to the blue CLI engine. The GUI exists as a visible operating surface, but service activation and execution are routed through the REPL command gate.
+
+The file preserves a JSON/Codex data model while turning the application into a kernel-based, API-routable, command-driven system.
+
+## Forms
+
+### Source Form
+
+- Single large Python script.
+- Uses only standard-library modules, including `tkinter`, `json`, `hashlib`, `subprocess`, `shlex`, `pathlib`, and `dataclasses`.
+- Defines initial codex nodes, file-tree entries, diagnostics, manifest preview, statuses, service IDs, aliases, validation constants, and UI theme values.
+
+### GUI Form
+
+- Tkinter application.
+- Dark theme with a blue CLI engine.
+- Header, left service panel, central REPL/command panel, right state/API panels, and optional quadtree desktop window/surface.
+- Scrollable UI frame support.
+
+### Kernel-Service Form
+
+The service layer includes:
+
+- `blue.cli.engine`
+- `kernel.clock`
+- `kernel.memory`
+- `kernel.terminal.linux`
+- `kernel.terminal.powershell7`
+- `api.gateway`
+- `codex.manifest`
+- `codex.graph`
+- `codex.validator`
+- `codex.emitter`
+- `codex.builder`
+- `diagnostics.runtime`
+- `version.ledger`
+- `configure_4.authoring.fabric`
+- `quadtree.desktop`
+
+Services remain dormant unless activated through the blue CLI engine, except the core command gate.
+
+### API Form
+
+The API gateway exposes local route handlers such as:
+
+- `/kernel/status`
+- `/kernel/services`
+- `/kernel/events`
+- `/terminal/linux`
+- `/terminal/powershell7`
+- `/codex/manifest`
+- `/codex/nodes`
+- `/codex/files`
+- `/codex/diagnostics`
+- `/codex/validate`
+- `/codex/emit`
+- `/codex/build`
+- `/version/snapshot`
+- `/configure4/status`
+- `/configure4/specs`
+- `/configure4/validate`
+- `/configure4/preview`
+- `/configure4/register`
+- `/quadtreeDesktop/status`
+- `/quadtreeDesktop/modules`
+- `/quadtreeDesktop/validate`
+- `/quadtreeDesktop/preview`
+- `/quadtreeDesktop/apply`
+- `/quadtreeDesktop/export`
+- `/quadtreeDesktop/import`
+
+### Class Form
+
+The major classes are:
+
+- `Configure4FabricRecord` — typed record for objects in a Configure4 fabric graph.
+- `Configure4Spec` — service specification draft with identity, command surface, API surface, execution behaviour, validation rules, persistence behaviour, generated code plan, diagnostics, metadata, and object graph.
+- `Configure4Sink` and sink subclasses — memory, console, file-preview, and JSON output sinks.
+- `Theme` — static colour palette for the UI.
+- `ScrollFrame` — scrollable Tkinter container.
+- `GraphicalCodexCliReplOS` — main application, service manager, UI renderer, command dispatcher, API gateway, quadtree desktop, Configure4 runtime, terminal bridge, manifest manager, diagnostics, emitter, builder, and utility layer.
+
+## Functionalities
+
+### Blue CLI Command System
+
+The command system supports:
+
+- service listing/status/activation/deactivation/restart/execution;
+- API listing/calling/registration;
+- codex node listing, selection, addition, patching, and validation;
+- file search;
+- manifest show/save/load;
+- diagnostics listing and patching;
+- emission preview;
+- build-run simulation/reporting;
+- version snapshots;
+- Linux and PowerShell command execution through gated terminal services;
+- kernel memory commands: `set`, `get`, and `vars`.
+
+### Configure4 Authoring Fabric
+
+`configure_4.authoring.fabric` supports authoring new runtime service specifications. Its commands include:
+
+- `configure4.help`
+- `configure4.status`
+- `configure4.mode <manual|semi_auto|auto>`
+- `configure4.new {json}`
+- `configure4.set <path> <value>`
+- `configure4.get [path]`
+- `configure4.validate [draft-id|all]`
+- `configure4.preview [draft-id]`
+- `configure4.register [draft-id]`
+- `configure4.export <path>`
+- `configure4.import <path>`
+- `configure4.sample`
+- `configure4.reset [draft-id|all]`
+- `configure4.history`
+- `configure4.list`
+
+It contains manual, semi-automatic, and automatic modes; validation gates; flow bounds; preview generation; runtime command binding; API route binding; service registration; spec hashing; and history tracking.
+
+### Quadtree Desktop
+
+`quadtree.desktop` maps services, routes, manifest objects, diagnostics, Configure4 drafts, batches, and outputs onto a programmable quadtree desktop. It includes commands for:
+
+- showing/hiding the desktop;
+- listing, creating, getting, and patching modules;
+- getting/patching layers;
+- getting, setting, patching, resetting, subdividing, and binding cells;
+- setting selections;
+- creating, selecting, patching, validating, previewing, applying, and rolling back batches;
+- validating, previewing, applying, exporting, importing, and snapshotting desktop state.
+
+### Terminal Bridge
+
+The system can execute Linux shell commands and PowerShell 7 commands through gated services after activation. It tracks current working directory and terminal timeout.
+
+### Codex Project Model
+
+The file models:
+
+- project manifest;
+- security policy;
+- schema layer;
+- module registry;
+- C++ emitter;
+- diagnostics runtime;
+- file manifests;
+- build reports;
+- validation results.
+
+## Purpose in the Codebase
+
+`8.py` is the graphical operating surface for the Codex system. It turns codebase/project objects into a service-controlled OS-like interface where every meaningful action flows through a command gate and can also be represented through API-style route calls.
+
+## Inputs
+
+- Blue CLI commands.
+- JSON payloads.
+- Tkinter UI actions that stage or submit CLI-compatible operations.
+- Files for manifest/configure import/export.
+- Terminal commands for Linux/PowerShell services.
+
+## Outputs
+
+- GUI-rendered service state.
+- REPL console text.
+- JSON API responses.
+- Manifest files.
+- Configure4 exported specs.
+- Quadtree manifests/images.
+- Build/diagnostic/version reports.
+
+## Practical Role
+
+Use this file as the high-level interactive Codex OS. It is the control plane for service activation, codex object management, API routing, Configure4 service authoring, and quadtree-based graphical state management.
+
+---
+
+# 7. `3.c`
+
+## Internal Identity
+
+- **Declared/internal name:** `configurator_v2.c`
+- **Language:** C11.
+- **Primary form:** User-specifiable C generative intelligence fabric.
+- **Architectural form:** xN-style C system preserving object-coded internal identifiers while allowing runtime names and flow parameters to be user-specified.
+
+## Main Purpose
+
+`3.c` generalizes the earlier C permutation generator into a configurable fabric. It allows users to define runtime object names, input names, input values, widths, flow names, flow types, output names, output targets, separators, prefixes, and suffixes through CLI flags, config files, or a micro UI.
+
+## Forms
+
+### Source Form
+
+- Single C11 source file.
+- Uses heavily obfuscated/xN-style internal identifiers such as `x3`, `x15`, `x28`, and `x31`.
+- Uses explicit fixed-size buffers and C structs.
+- Uses manual string parsing, file output, flow dispatch, and CLI handling.
+
+### Data Form
+
+The internal structure maps to the following conceptual objects:
+
+- output sink structure with context and write callbacks;
+- flow enum with four modes;
+- object spec with runtime names, input value, width, flow, output target, separator, prefix, and suffix;
+- fabric/config container holding multiple object specs.
+
+### Flow Form
+
+Supported flow types are:
+
+- `cartesian` — generate every fixed-width combination from `input_value`.
+- `literal` — write `input_value` once.
+- `repeat` — write `input_value` `input_width` times.
+- `reverse` — write `input_value` reversed once.
+
+### Config Form
+
+The config-file form uses key/value records such as:
+
+```text
+object_name=x33
+input_name=x1
+input_value=0123456789
+input_width=7
+flow_name=x15
+flow_type=cartesian
+output_name=x31
+output_target=x33.txt
+separator=\n
+end
+```
+
+## Functionalities
+
+### CLI Interface
+
+Supported modes and flags include:
+
+- `--ui`
+- `--config <path>`
+- `--sample-config <path>`
+- direct object flags:
+  - `--object-name`
+  - `--input-name`
+  - `--input-value`
+  - `--input-width`
+  - `--flow-name`
+  - `--flow-type`
+  - `--output-name`
+  - `--output-target`
+  - `--separator`
+  - `--prefix`
+  - `--suffix`
+- aliases: `-n`, `-i`, `-w`, `-f`, `-o`.
+
+### Generation
+
+The file can generate object outputs using the selected flow type and write the resulting payloads to files, stdout, or `-`.
+
+### Config Loading
+
+It parses config files with comments, whitespace trimming, key/value pairs, and `end` delimiters for object specs.
+
+### Sample Config
+
+It can emit a sample config file containing both a cartesian digit object and a reverse text example.
+
+### Micro UI
+
+The `--ui` mode prompts the user for object fields interactively.
+
+## Purpose in the Codebase
+
+`3.c` is the bridge between fixed permutation generation and user-specified fabric generation. It is less type-safe and less readable than the C++ replacements, but it carries the important transition into named runtime objects and multiple flow types.
+
+## Inputs
+
+- CLI flags.
+- Config files.
+- Micro UI prompt responses.
+
+## Outputs
+
+- Generated text/fabric output.
+- Sample config files.
+- File/stdout records.
+
+## Practical Role
+
+Use this file as a C-level fabric configurator when the runtime object naming style and xN internal naming style are part of the intended system design.
+
+---
+
+# 8. `2.c`
+
+## Internal Identity
+
+- **Declared/internal name:** Not explicitly declared.
+- **Language:** C.
+- **Primary form:** Compact/obfuscated numeric permutation generator.
+- **Architectural form:** xN-named C implementation of an output-sink permutation generator.
+
+## Main Purpose
+
+`2.c` generates all fixed-length combinations over the digit alphabet `0` through `9` and writes them to `x33.txt`. The hard-coded generation length is 7.
+
+## Forms
+
+### Source Form
+
+- Single C source file.
+- Uses fixed-width integer types and Boolean status returns.
+- Uses obfuscated identifiers (`x0`, `x1`, `x2`, etc.).
+- Uses a sink structure with write callbacks.
+
+### Data Form
+
+- `x0` is the maximum permutation length, set to 10.
+- `x1` is the digit alphabet.
+- `x2` is the alphabet size.
+- `x3` is the output sink structure with a file context, buffer writer, and character writer.
+- `x30` in `main()` is the hard-coded generation length, set to 7.
+
+## Functionalities
+
+### Safe Power
+
+The function `x10` computes `base^exp` with overflow checking against `UINT64_MAX`.
+
+### Combination Generation
+
+The function `x15` enumerates every ordinal from `0` to `10^7 - 1`, converts it into a fixed-width base-10 digit string, and writes each record followed by a newline.
+
+### File Output
+
+The functions `x23`, `x25`, `x26`, and `x28` implement file writing and file lifecycle control.
+
+## Purpose in the Codebase
+
+`2.c` is a minimal numeric generator in xN-coded form. It appears to be a compact object-coded variant of the clearer safety-critical generator in `1.c`, specialized to digits and a longer fixed width.
+
+## Inputs
+
+- No runtime user input.
+- Hard-coded generation length: 7.
+- Hard-coded output file: `x33.txt`.
+
+## Outputs
+
+- `x33.txt`, containing every 7-digit combination from the digit alphabet.
+
+## Practical Role
+
+Use this file as a minimal C generator for numeric object-space enumeration. It is not flexible, but it is structurally simple and deterministic.
+
+---
+
+# 9. `1.c`
+
+## Internal Identity
+
+- **Declared/internal name:** `main.c`
+- **Description in header:** Permutation Generator in C, architected to safety-critical standards.
+- **Language:** C.
+- **Primary form:** Clear, safety-oriented fixed permutation generator.
+- **Architectural form:** Direct C implementation with configuration constants, output sink abstraction, safe exponentiation, generator core, file sink, and system assembler `main()`.
+
+## Main Purpose
+
+`1.c` generates all possible character combinations for a fixed length using a predefined character set. It writes the combinations to `system_safe.txt`. It is a complete rewrite of an original concept with clearer structure and safety-critical design principles.
+
+## Forms
+
+### Source Form
+
+- Single C source file.
+- Uses descriptive identifiers rather than xN obfuscation.
+- Contains a structured header comment.
+- Divides code into labelled sections:
+  1. configuration and data definitions;
+  2. abstract output interface;
+  3. core generator logic;
+  4. file sink implementation;
+  5. system assembler.
+
+### Data Form
+
+- `MAX_PERMUTATION_LENGTH` is 10.
+- `ALPHABET` contains lowercase letters, uppercase letters, digits, space, and newline.
+- `ALPHABET_SIZE` is computed from the array.
+- `OutputSink` abstracts output as `write` and `write_char` callbacks.
+
+## Functionalities
+
+### Safe Exponentiation
+
+`safe_uint64_power` computes the number of combinations while checking for unsigned 64-bit overflow.
+
+### Permutation Generation
+
+`generate_permutations` maps each ordinal into a fixed-width representation over the alphabet and writes the result through the output sink.
+
+### File Output
+
+`file_sink_write`, `file_sink_write_char`, `file_sink_init`, and `file_sink_close` manage output to `system_safe.txt`.
+
+### Main Assembly
+
+`main()` sets `permutation_length` to 4, validates it, opens the file sink, generates permutations, closes the sink, and returns success/failure.
+
+## Purpose in the Codebase
+
+`1.c` is the readable baseline generator. It establishes the core design pattern later reused in other files:
+
+```text
+alphabet + fixed length + ordinal enumeration + output sink + safety checks -> generated records
+```
+
+## Inputs
+
+- No runtime user input.
+- Hard-coded alphabet.
+- Hard-coded permutation length: 4.
+- Hard-coded output file: `system_safe.txt`.
+
+## Outputs
+
+- `system_safe.txt`, containing all generated fixed-length permutations over the defined alphabet.
+
+## Practical Role
+
+Use this file as the reference implementation for the permutation algorithm and output-sink architecture before moving to the compact xN C version or the configurable C/C++ versions.
+
+---
+
+
+# 10. `9.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `9.py — General Dimensional Circuit Composition and Rendering Utility`.
+- **Language:** Python 3.
+- **Primary form:** Executable command-line utility with subcommands and an interactive fallback menu.
+- **Architectural form:** General-dimensional accepted-state processor that joins colour-index decoding, n-dimensional tensor validation, deterministic circuit derivation, semantic category construction, projection rendering, and fabric-length matching.
+
+## Main Purpose
+
+`9.py` implements a general-dimensional version of a colour-index/circuit pipeline. Its central transformation is:
+
+```text
+accepted state -> colour-index tensor -> deterministic circuit/category/rendering outputs
+```
+
+The file treats a decimal or binary state as a sequence of fixed-length decimal colour tokens. It verifies that the token count forms a valid n-dimensional tensor length `L = m^n`, checks token ranges against the 24-bit colour-index domain, rejects direct orthogonal adjacency conflicts when enabled by the acceptance rule, converts accepted tokens to HEX colours, and then derives deterministic circuit, category, projection, and fabric-analysis outputs.
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses `argparse` for CLI command dispatch.
+- Uses `dataclasses` for typed data records.
+- Uses standard libraries for hashing, JSON, arithmetic, filesystem operations, regular expressions, and typing.
+- Treats `qiskit`, `matplotlib`, and `Pillow` as optional dependencies.
+- Always emits text/JSON outputs for core derivations; PNG and Qiskit outputs are produced only when the optional dependencies are available.
+
+### Dimensional Fabric Form
+
+The file encodes a fabric model involving:
+
+- token count `L`;
+- active dimension `n`;
+- root `m` where `L = m^n`;
+- minimum-root constraint `m >= min_root`;
+- nearest valid length search;
+- bounded exponentiation for large comparisons;
+- primary/secondary capacity comparison via `h^s` and `p^(L-1)`;
+- ranked matching of observed text length and observed alphabet size against possible fabric configurations.
+
+### Colour Form
+
+The state is decoded into fixed-width decimal chunks using `SEGMENT_LEN = 7`. Each token is treated as a colour index in the range:
+
+```text
+1 <= index <= 16^6
+```
+
+The conversion rule is:
+
+```text
+index -> HEX colour = #(index - 1) as six hexadecimal digits
+```
+
+This means `1` maps to `#000000` and `16^6` maps to `#ffffff`.
+
+### Tensor Form
+
+A valid accepted state must satisfy the following conditions:
+
+- the state is decimal text or `0b`-prefixed binary text;
+- the decoded token count is an exact nth power;
+- the root is at least the configured `min_root`;
+- every decoded token lies inside the colour-index domain;
+- optional wrap or non-wrap orthogonal adjacency checking does not find equal neighbouring tokens.
+
+The tensor is traversed in row-major order. Flat indexes are converted to n-dimensional coordinates, and n-dimensional coordinates are converted back to row-major flat indexes.
+
+### Circuit Form
+
+The circuit derivation maps each accepted token into a deterministic gate event. The default gate alphabet is:
+
+```text
+x, y, z, h, s, sdg, t, tdg, rx, ry, rz, cx
+```
+
+The derivation rule uses:
+
+- row-major tensor traversal;
+- a bounded number of qubits;
+- a bounded number of layers;
+- coordinate-sensitive source-qubit assignment;
+- token- and axis-sensitive controlled-target assignment;
+- optional `reversible_only` mode that restricts events to `x` and `cx`.
+
+When Qiskit is available, the event stream can be converted into a quantum circuit and a classical-shadow circuit. The classical shadow only mirrors deterministic classical components such as `x` and `cx`.
+
+### Category Form
+
+The semantic category layer derives a free-category presentation from the n-dimensional tensor. Tokens become semantic symbols, adjacent cells become generators, and the category is represented as:
+
+```text
+objects + adjacency-labelled generators + implicit identity morphisms + free path composition
+```
+
+The output object colours are averaged from the HEX colours associated with the symbols. The generator labels encode active tensor axes such as `A0`, `A1`, and so on.
+
+### Rendering Form
+
+The script can render:
+
+- 2D projections/slices of accepted n-dimensional tensors;
+- semantic category diagrams;
+- quantum/classical Qiskit circuit PNGs;
+- side-by-side assembly PNGs combining circuit, projection, or category renderings.
+
+Rendering uses `matplotlib` and `Pillow` where available.
+
+### Class Form
+
+The principal dataclasses are:
+
+- `DimensionSpec` — active dimension, root, length, and n-dimensional tensor shape.
+- `AcceptanceReport` — acceptance status, reason, dimensional spec, decoded indexes, HEX colours, segment length, and wrap-adjacency setting.
+- `GateEvent` — layer, coordinate, source token, active axis, gate name, qubit operands, and optional rotation angle.
+
+## Functionalities
+
+### Acceptance Checking
+
+The `accept` command verifies whether a state is a valid n-dimensional colour-index tensor. It can print a human-readable report, a JSON report, decoded indexes, and decoded HEX colours.
+
+### Circuit Derivation
+
+The `derive` command accepts a valid state and writes:
+
+- `nd_gate_events.json`;
+- `nd_gate_sequence.txt`;
+- `nd_derive_manifest.json`;
+- optional Qiskit circuit text outputs;
+- optional PNG circuit renderings;
+- optional side-by-side circuit assembly image.
+
+### Semantic Category Derivation
+
+The `category` command accepts a valid state and writes:
+
+- `nd_category.json`;
+- optional `nd_projection.png`;
+- optional `nd_category.png`;
+- optional `nd_category_assembly.png`;
+- `nd_category_manifest.json`.
+
+### Projection Rendering
+
+The `projection` command renders a 2D slice of an accepted n-dimensional tensor. It supports choosing two visible axes, fixing the remaining axes, and optionally showing token labels.
+
+### Fabric-Length Analysis
+
+The `fabric` command computes valid dimensional lengths under the primary/secondary capacity model. It reports `Lmax`, valid `L = m^n` lengths, and optionally the nearest valid length to a target.
+
+### Text Matching
+
+The `match-text` command analyzes text from a string, file, or standard input. It computes character length, unique-character count, line count, unique-character preview, and ranked fabric-configuration matches.
+
+### Interactive Menu
+
+The `menu` command provides a fallback terminal interface for acceptance checking, derivation, category generation, and fabric analysis.
+
+## Purpose in the Codebase
+
+`9.py` is the bridge between the colour-index acceptance model, n-dimensional tensor structure, deterministic circuit generation, semantic category construction, and visual rendering. It extends the conceptual line from `0.py` and `7.php`: `0.py` maps Boolean behaviour to colours, `7.php` analyzes dimensional alphabet/hash-length fabrics, and `9.py` turns accepted colour-index states into concrete n-dimensional computational and categorical artifacts.
+
+## Inputs
+
+- Decimal accepted-state strings.
+- `0b`-prefixed binary state strings.
+- Text files containing accepted-state data.
+- Text strings or text files for match analysis.
+- Fabric parameters `p`, `h`, `s`, `n`, and `min_root`.
+- CLI flags controlling dimensions, adjacency, qubits, layers, projections, fixed axes, labels, and output directories.
+
+## Outputs
+
+- Acceptance reports.
+- Decoded colour indexes.
+- HEX colour values.
+- Gate-event JSON.
+- Gate-sequence text.
+- Qiskit circuit text where available.
+- Circuit, projection, category, and assembly PNGs where available.
+- Semantic category JSON.
+- Fabric-length reports.
+- Text-analysis and ranked-match reports.
+- Manifest JSON files listing generated outputs.
+
+## Practical Role
+
+Use this file when the goal is to treat an accepted colour-index state as an n-dimensional computational fabric. It is suitable for generating reproducible circuit streams, categorical graph presentations, visual tensor slices, and dimensional matching reports from symbolic states.
+
+---
+
+# 11. `10.py`
+
+## Internal Identity
+
+- **Declared/internal name:** no explicit module docstring; operationally a repository/documentation bundler.
+- **Recommended descriptive name:** `bundle_documentation.py`.
+- **Language:** Python 3.
+- **Primary form:** Executable command-line script.
+- **Architectural form:** Static project-tree scanner and Markdown documentation-bundle generator.
+
+## Main Purpose
+
+`10.py` bundles a project directory into a single Markdown document, normally `doc/doc.md`. It scans a root folder for included text files and PNG images, renders a deterministic filesystem tree, generates a table of contents, and embeds the contents of each supported text file in fenced code blocks. PNG images are not embedded as bytes; instead, their dimensions and relative paths are recorded and Markdown image references are emitted.
+
+The core transformation is:
+
+```text
+project directory -> included file list -> tree + table of contents + file sections -> doc/doc.md
+```
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses only standard-library modules.
+- Uses `pathlib.Path` for filesystem paths.
+- Uses `os.walk` for recursive traversal.
+- Uses regular expressions to build safe fenced code blocks.
+- Uses a small PNG IHDR parser to read dimensions without external image libraries.
+
+### Inclusion Form
+
+The bundler includes text files by extension and special extensionless filenames. Included text extensions are:
+
+```text
+.css, .cmd, .js, .php, .hpp, .cpp, .md, .py, .txt, .ps1, .html, .h, .json
+```
+
+Special included filenames are:
+
+```text
+.env, .gitignore, .htaccess
+```
+
+PNG files are also included as image references.
+
+### Ignore Form
+
+The scanner prunes ignored directories so that generated artifacts, vendor folders, dependency folders, editor metadata, and runtime folders are not bundled into the output. Ignored directories include:
+
+```text
+.git, .svn, .hg, node_modules, vendor, venv, .venv, __pycache__, dist, build, doc_export, .idea, .vscode, doc, .runtime
+```
+
+The `doc` directory is ignored so that the generated documentation bundle does not recursively bundle itself.
+
+### Safety Form
+
+The file uses several safety filters:
+
+- binary detection using NUL-byte sampling;
+- a maximum text-file byte limit of 5 MB;
+- replacement decoding for text files;
+- deterministic escaping of fenced code blocks;
+- deterministic tree ordering with directories first and files second.
+
+### Markdown Output Form
+
+The generated Markdown contains:
+
+- document title;
+- root path;
+- generation timestamp;
+- included-file count;
+- maximum text-file byte setting;
+- ignored-directory list;
+- ASCII filesystem tree;
+- table of contents;
+- one section per included file;
+- file byte count;
+- file type;
+- fenced code content for text files;
+- PNG dimensions and image reference for PNG files.
+
+## Functionalities
+
+### Path Inclusion
+
+`iter_included_paths()` walks the project root, prunes ignored directories, and yields files whose names/extensions match the inclusion rules.
+
+### Text Reading
+
+`read_text()` reads text files safely. It skips files that exceed the byte limit or appear to be binary and returns a note explaining the skip condition.
+
+### Language Detection
+
+`detect_code_lang()` maps file extensions to Markdown code-fence language identifiers so code blocks render with suitable syntax highlighting where supported.
+
+### Fence Safety
+
+`fenced_block()` inspects the content for runs of backticks and chooses a fence longer than any existing run, preventing embedded code from prematurely closing the Markdown fence.
+
+### PNG Dimension Reading
+
+`png_dimensions()` reads the PNG signature and IHDR chunk directly to extract image width and height without depending on Pillow.
+
+### Tree Building
+
+`build_tree()` and `render_tree()` construct a deterministic ASCII tree from the included relative paths.
+
+### Documentation Bundle Creation
+
+`create_doc_md()` coordinates scanning, tree rendering, table-of-contents generation, text embedding, PNG referencing, and output writing.
+
+### CLI Behaviour
+
+The CLI accepts:
+
+- `--root` — root folder to scan; defaults to the script directory;
+- `--out` — output Markdown path; defaults to `<root>/doc/doc.md`.
+
+On success, it prints the created output path.
+
+## Purpose in the Codebase
+
+`10.py` is the forward documentation-bundle tool. It converts a project’s source tree into a portable Markdown artifact that can be read, archived, indexed, reviewed, or later reconstructed by the companion exporter in `11.py`.
+
+## Inputs
+
+- Root directory path.
+- Optional output Markdown path.
+- Included project text files.
+- Included PNG images.
+
+## Outputs
+
+- A generated Markdown documentation bundle, normally `doc/doc.md`.
+- Embedded text-file contents inside fenced code blocks.
+- PNG metadata and Markdown image references.
+- Filesystem tree and table of contents.
+
+## Practical Role
+
+Use this file when the goal is to preserve or transmit a codebase as one Markdown document. It is suited to review, documentation, model ingestion, archival, and later round-trip export.
+
+---
+
+# 12. `11.py`
+
+## Internal Identity
+
+- **Declared/internal name:** no explicit module docstring; CLI error text identifies the tool as `export-doc-md.py`.
+- **Recommended descriptive name:** `export-doc-md.py`.
+- **Language:** Python 3.
+- **Primary form:** Executable command-line script.
+- **Architectural form:** Reverse documentation-bundle exporter that rebuilds a file tree from a `doc.md` bundle created by `10.py`.
+
+## Main Purpose
+
+`11.py` reconstructs a project file tree from a bundled Markdown document. It parses file sections, extracts embedded text from fenced code blocks, writes text files back to their original relative paths, and attempts to recover PNG assets from linked paths or an explicitly provided asset root.
+
+The core transformation is:
+
+```text
+doc.md documentation bundle -> parsed file sections -> safe relative paths -> reconstructed file tree
+```
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses only standard-library modules.
+- Uses compiled regular expressions to identify bundled file sections, file types, notes, and PNG paths.
+- Uses dataclasses to represent parsed sections and exported files.
+- Uses `pathlib.Path` and `shutil` for filesystem restoration.
+- Uses explicit error handling and status reporting.
+
+### Bundle Parsing Form
+
+The parser expects file sections in the form emitted by `10.py`:
+
+```text
+<a id="file-N"></a>
+### [N] `relative/path`
+```
+
+Each section is parsed into:
+
+- numeric index;
+- relative path;
+- inferred file type;
+- raw Markdown section body.
+
+### Text-Recovery Form
+
+For text files, the exporter finds the first fenced code block in the section. Because the bundler chooses a fence longer than any backtick run in the content, the exporter can safely identify the closing fence and remove exactly one sentinel newline before writing the recovered text.
+
+If a section lacks a fenced block, the exporter writes an empty file and optionally records a warning when the original content was skipped.
+
+### PNG-Recovery Form
+
+PNG bytes are not embedded in the Markdown bundle. The exporter therefore attempts to copy PNG files from:
+
+1. the linked path relative to the `doc.md` location;
+2. `--asset-root` plus the original relative path, when an asset root is provided.
+
+If neither source exists, the exporter reports a `missing-binary` status.
+
+### Path-Safety Form
+
+The exporter rejects unsafe paths before writing:
+
+- empty paths;
+- POSIX absolute paths;
+- Windows drive paths;
+- UNC-style paths;
+- parent-directory segments such as `..`.
+
+This prevents an edited or malicious `doc.md` from writing outside the selected export directory.
+
+### Data Class Form
+
+The principal dataclasses are:
+
+- `ExportedFile` — output record containing file index, relative path, file type, target path, status, and optional warning.
+- `ParsedSection` — parsed bundle section containing file index, relative path, file type, and section body.
+
+## Functionalities
+
+### Bundle Section Parsing
+
+`parse_bundle_doc()` splits the Markdown bundle into ordered file sections and identifies each section’s declared file type.
+
+### Text Extraction
+
+`_extract_text_content()` recovers embedded text from fenced code blocks and returns both the recovered content and any warning.
+
+### PNG Copying
+
+`_try_copy_png()` attempts to recover image files from the documentation-relative linked path or from the original project root supplied through `--asset-root`.
+
+### Export Execution
+
+`export_doc_md()` coordinates validation, optional output cleaning, section parsing, text writing, PNG copying, warning collection, and optional strict-mode failure.
+
+### CLI Behaviour
+
+The CLI accepts:
+
+- `--doc` — path to the bundled Markdown file; defaults to `./doc/doc.md` if present, otherwise `./doc.md`;
+- `--out` — target export directory; defaults to `./doc_export`;
+- `--asset-root` — optional original project root for PNG recovery;
+- `--clean` — delete the target export directory before rebuilding it;
+- `--strict` — return a non-zero exit code if any file cannot be fully recovered.
+
+The CLI prints a report containing counts for written text files, copied assets, missing assets, skipped unsafe paths, and warnings.
+
+## Purpose in the Codebase
+
+`11.py` is the reverse partner of `10.py`. Together, the two scripts form a Markdown round-trip system:
+
+```text
+source tree -> doc/doc.md -> reconstructed source tree
+```
+
+Text files can be round-tripped because their bytes are embedded as fenced code content. PNG files require the original linked asset or an asset root because they are referenced rather than embedded.
+
+## Inputs
+
+- Bundled `doc.md` file.
+- Optional target output directory.
+- Optional asset-root directory for recovering PNG files.
+- Optional clean and strict flags.
+
+## Outputs
+
+- Reconstructed text files in the target export directory.
+- Copied PNG files when recoverable.
+- Warnings for skipped, missing, or unrecoverable content.
+- Terminal export report.
+
+## Practical Role
+
+Use this file when the goal is to restore a codebase from a Markdown documentation bundle. It is especially useful as a companion to `10.py`, enabling reversible documentation artifacts for text-heavy projects.
+
+---
+
+# 13. `12.md`
+
+## Internal Identity
+
+- **Declared/internal name:** `The Elements`.
+- **Authorship line:** `Dominic Alexander Cooper`.
+- **Language/form:** Markdown/plain-text conceptual document.
+- **Primary form:** Numeric-seed plus numbered axiom list.
+- **Architectural form:** Axiomatic conceptual-source file for a competence, learning, correction, memory, tool, and truth framework.
+
+## Main Purpose
+
+`12.md` defines a compact axiom system named `The Elements`. It begins with a very large decimal integer, then presents axioms numbered `000` through `065`. The document functions as a conceptual source file rather than executable code.
+
+Its core structure is:
+
+```text
+long decimal seed + title + author line + axioms 000..065
+```
+
+The axioms define a human-centric competence system in which existence, pain, competence, incompetence, learning, contradiction, correction, tools, memory, context, and truth are treated as formalizable system components.
+
+## Forms
+
+### Numeric Seed Form
+
+The first line is a long decimal integer. Within the larger codebase, this can be treated as a seed, identifier, entropy source, system-state marker, or canonical numeric handle. The file itself does not execute this integer; it stores it as textual data.
+
+### Title and Authorship Form
+
+The document title is:
+
+```text
+The Elements
+```
+
+The named author line is:
+
+```text
+Dominic Alexander Cooper
+```
+
+### Axiom Form
+
+The axiom list runs from `000` to `065`. Each axiom is represented as:
+
+```text
+NNN    statement
+```
+
+The list uses zero-padded numeric labels, making the statements directly addressable and suitable for indexing, reference, parsing, validation, or incorporation into a larger symbolic system.
+
+### Foundational Axiom Group
+
+Axioms `000` to `016` establish the base vocabulary:
+
+- existence;
+- pain;
+- competence;
+- incompetence;
+- learning;
+- contradiction;
+- proof by construction;
+- proof by contradiction as non-preferred for learning;
+- quantifiability of competence and incompetence;
+- context-indexed competence;
+- innocence;
+- competence as functional axial n-dimensional space.
+
+### Derived System Axiom Group
+
+Axioms `017` to `032` restate and derive system-level consequences from the first group. These axioms treat the person as a living information-bearing system, pain as a valid signal, incompetence as a negative state, competence as a positive state, learning as a valid update operation, contradiction as a corruption signal, construction as the preferred proof engine, and correction as non-guilt.
+
+### Mental-Database Axiom Group
+
+Axioms `033` to `063` define the mental human-centric database. The mind ingests, encodes, indexes, queries, validates, rejects, and externalizes information. The environment, tools, notes, diagrams, calendars, checklists, questions, answers, mistakes, correction, and optimization become database components or operations.
+
+### Truth Closure Axiom Group
+
+Axioms `064` and `065` give the closure rules:
+
+- once true, always true;
+- what is not true cannot be done.
+
+These provide an absolute truth constraint at the end of the axiom list.
+
+## Functionalities
+
+Although `12.md` is not executable code, it performs several system functions:
+
+- defines stable numbered conceptual records;
+- supplies a seed-like numeric identifier;
+- gives a competence/incompetence ontology;
+- specifies learning as constructive update;
+- treats contradiction as a corruption/incompetence signal;
+- frames correction as competence restoration rather than guilt;
+- models mind, body, environment, and tools as one extended database;
+- gives a terminal target of complete competence under innocence and functional dimensional competence-space;
+- supplies truth-preservation constraints for downstream systems.
+
+## Purpose in the Codebase
+
+`12.md` is the philosophical and axiomatic substrate for the wider generative/configurational system. Where the C/C++ files generate records, `0.py` maps Boolean behaviour to colours, `7.php` and `9.py` analyze dimensional fabrics, and `8.py` provides a command-gated operating surface, `12.md` supplies the conceptual rules that define what the system is trying to preserve: competence, constructive learning, correction, innocence, and truth.
+
+## Inputs
+
+- No runtime input.
+- Static decimal seed.
+- Static axiom list.
+
+## Outputs
+
+- A numbered axiom set.
+- A conceptual source for parser/indexer/database use.
+- A stable reference list for competence, correction, learning, and truth constraints.
+
+## Practical Role
+
+Use this file as the formal conceptual dictionary for systems that need to align with the `The Elements` axiom set. It can be parsed into a database, referenced in documentation, used as validation text, or treated as an axiomatic constraint layer for later Codex, OS, fabric, and learning-system modules.
+
+---
+
+# Cross-File Evolution Map
+
+## Stage 1 — Clear C Baseline
+
+`1.c` defines the readable algorithm: a fixed alphabet, safe power calculation, output-sink abstraction, and fixed-length permutation generation.
+
+## Stage 2 — xN Numeric C Variant
+
+`2.c` compresses the concept into xN-style naming and specializes the alphabet to decimal digits with hard-coded width 7.
+
+## Stage 3 — User-Specified C Fabric
+
+`3.c` adds runtime object names, flow names, input/output names, config files, CLI flags, micro UI, sample config, and multiple flow types.
+
+## Stage 4 — Safer C++ Broad-Character Generator
+
+`4.cpp` recreates the broad-character generator in safer C++ with dry-run planning, overwrite protection, count limits, escaped records, and configurable alphabet choices.
+
+## Stage 5 — Safer C++ Numeric Generator
+
+`5.cpp` specializes the safer C++ approach to decimal numeric records, giving stable digit-only generated handles.
+
+## Stage 6 — Object-Spec C++ Fabric
+
+`6.cpp` generalizes into named object specs, config/menu/direct input modes, multiple output targets, flow dispatch, sample configs, and bounded escaped `cppdb` records.
+
+## Stage 7 — Logic Colour Encoding
+
+`0.py` gives a canonical behavioural representation layer for Boolean gates, circuits, and transition machines by mapping truth-table behaviour to signatures and colours.
+
+## Stage 8 — n-Dimensional Fabric REPL
+
+`7.php` analyzes symbolic/textual structures as alphabet-length-dimensional fabrics and provides matching/persistence/export through a CLI REPL.
+
+## Stage 9 — Graphical Codex REPL OS
+
+`8.py` creates the graphical service-controlled operating surface that can host command, API, Codex, Configure4, terminal, versioning, diagnostic, and quadtree-desktop behaviours.
+
+## Stage 10 — General-Dimensional Circuit/Category Utility
+
+`9.py` turns accepted colour-index states into n-dimensional tensors, deterministic gate events, semantic free-category presentations, projection renders, optional Qiskit circuit artifacts, and dimensional fabric reports.
+
+## Stage 11 — Documentation Bundle Generator
+
+`10.py` converts a project tree into a single Markdown documentation bundle with an included filesystem tree, table of contents, file metadata, embedded text content, and linked PNG image references.
+
+## Stage 12 — Documentation Bundle Exporter
+
+`11.py` reverses the documentation bundle by reconstructing text files from fenced code blocks and recovering PNG assets from linked paths or an original asset root.
+
+## Stage 13 — Axiomatic Source Layer
+
+`12.md` provides `The Elements`: a numeric seed plus axioms `000` through `065`, defining the conceptual basis for competence, learning, correction, innocence, tools, memory, and truth.
+
+---
+
+# Functional Classification Table
+
+| File | Category | Main Functionality | Main Purpose |
+|---|---|---|---|
+| `1.c` | Baseline C generator | Generate fixed-length permutations from broad alphabet | Establish readable safe permutation architecture |
+| `2.c` | xN C generator | Generate 7-digit numeric combinations | Compact deterministic numeric enumeration |
+| `3.c` | Configurable C fabric | Generate user-specified cartesian/literal/repeat/reverse outputs | Move from fixed generation to runtime-configurable fabric |
+| `4.cpp` | C++ broad generator | Generate escaped records over selected alphabets | Safer C++ replacement for broad-character generation |
+| `5.cpp` | C++ numeric generator | Generate escaped numeric `cppdb` records | Stable numeric handle/source-record generation |
+| `6.cpp` | C++ object-spec fabric | Generate records from named object specs and config/menu/direct input | Current safer configurable fabric generator |
+| `0.py` | Boolean colour encoder | Encode Boolean truth tables/circuits/state machines to colours | Canonical visual representation of logic behaviour |
+| `7.php` | nD analysis REPL | Analyze alphabet lengths, dimensions, pasted text, and config matches | Interactive n-dimensional hash-length fabric analysis |
+| `8.py` | Graphical REPL OS | Control services, API routes, Codex graph, Configure4, terminals, quadtree desktop | Full graphical command-gated Codex operating surface |
+| `9.py` | nD circuit/category utility | Validate accepted states, derive gate events, render projections/categories, analyze fabric lengths | Convert colour-index tensors into computational/categorical artifacts |
+| `10.py` | Documentation bundler | Bundle a source tree into `doc/doc.md` with tree, TOC, text contents, and PNG references | Portable Markdown documentation and archival artifact |
+| `11.py` | Documentation exporter | Rebuild files from a bundled `doc.md`, including text files and recoverable PNGs | Round-trip restoration of a documentation bundle |
+| `12.md` | Axiomatic source document | Store numeric seed and axioms `000` to `065` | Conceptual substrate for competence, learning, correction, and truth constraints |
+
+---
+
+# Dependency and Runtime Notes
+
+## Standard Dependencies
+
+- The C files use standard C headers such as `stdio.h`, `stdint.h`, `stdbool.h`, `limits.h`, `string.h`, `stdlib.h`, and `ctype.h`.
+- The C++ files use standard C++ headers such as `iostream`, `fstream`, `sstream`, `string`, `string_view`, `vector`, `map`, `limits`, `stdexcept`, `iomanip`, `cstdio`, and `cstdint`.
+- `0.py` uses only standard Python libraries.
+- `10.py` and `11.py` use only standard Python libraries.
+- `8.py` uses Tkinter and standard Python libraries; Tkinter must be available in the Python installation.
+- `7.php` requires PHP CLI for full REPL behaviour.
+- `9.py` uses standard Python libraries for core JSON/text outputs and optionally uses `qiskit`, `matplotlib`, and `Pillow` for circuit construction and PNG rendering.
+- `12.md` has no runtime dependency.
+
+## Build/Run Summary
+
+```bash
+# C baseline
+cc -std=c11 -Wall -Wextra -pedantic -O2 1.c -o main
+
+# xN numeric C generator
+cc -std=c11 -Wall -Wextra -pedantic -O2 2.c -o generator_xn
+
+# C configurable fabric
+cc -std=c11 -Wall -Wextra -pedantic -O2 3.c -o configurator_v2
+
+# C++ generators/fabrics
+c++ -std=c++17 -Wall -Wextra -pedantic -O2 4.cpp -o configure_1
+c++ -std=c++17 -Wall -Wextra -pedantic -O2 5.cpp -o configure_2
+c++ -std=c++17 -Wall -Wextra -pedantic -O2 6.cpp -o configure_3
+
+# Python CTCE
+python 0.py
+
+# PHP nDCodex REPL
+php 7.php
+
+# Tkinter Graphical Codex CLI-REPL OS
+python 8.py
+
+# General n-dimensional circuit/category/projection/fabric utility
+python 9.py menu
+python 9.py accept --state 0000001000000200000030000004 --dimension 2
+python 9.py derive --in state.txt --dimension 3 --outdir out9
+python 9.py category --in state.txt --dimension 4 --outdir out9 --assembly
+python 9.py projection --in state.txt --dimension 3 --axis-a 0 --axis-b 2
+python 9.py fabric --p 7 --h 10 --s 5 --dimension 2
+python 9.py match-text --text-file source.txt --dimension 3
+
+# Documentation bundle generator
+python 10.py --root . --out doc/doc.md
+
+# Documentation bundle exporter
+python 11.py --doc doc/doc.md --out doc_export --asset-root .
+
+# Axiomatic Markdown source
+# 12.md is read, parsed, indexed, or referenced as a static document.
+```
+
+---
+
+# Design Pattern Summary
+
+The codebase repeatedly applies the same general pattern:
+
+```text
+bounded symbolic input space
+    -> deterministic enumeration or analysis
+    -> safe validation gates
+    -> canonical record/signature/output form
+    -> file, REPL, colour, API, GUI, render, bundle, export, or axiom representation
+```
+
+In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed conceptual source that constrains the meaning of competence, correction, learning, and truth.
+
+---
+
+# Recommended Naming Map
+
+The uploaded numeric filenames can be mapped to descriptive project names as follows:
+
+| Uploaded file | Recommended descriptive name |
+|---|---|
+| `1.c` | `main_permutation_generator.c` |
+| `2.c` | `numeric_xn_permutation_generator.c` |
+| `3.c` | `configurator_v2.c` |
+| `4.cpp` | `configure_1.cpp` |
+| `5.cpp` | `configure_2.cpp` |
+| `6.cpp` | `configure_3.cpp` |
+| `0.py` | `canonical_truth_table_colour_encoding.py` |
+| `7.php` | `nDCodex.php` |
+| `8.py` | `graphical_codex_cli_repl_os.py` |
+| `9.py` | `general_dimensional_circuit_composition_rendering.py` |
+| `10.py` | `bundle_documentation.py` |
+| `11.py` | `export-doc-md.py` |
+| `12.md` | `the_elements.md` |
+
+---
+
+# Maintenance Notes
+
+1. Keep `1.c` as the readable algorithmic baseline.
+2. Treat `2.c` and `3.c` as xN-style experimental/system-code forms.
+3. Prefer `4.cpp`, `5.cpp`, and `6.cpp` for safer production-style generation because they include dry-run planning, explicit execution, and overwrite protection.
+4. Prefer `6.cpp` over `3.c` when object-spec configurability is needed with clearer safety boundaries.
+5. Use `0.py` for logic/gate/circuit visual identity systems.
+6. Use `7.php` for dimensional alphabet-length/text-analysis REPL work.
+7. Use `8.py` as the graphical command-gated operating surface and service/API control plane.
+8. Use `9.py` when accepted colour-index states need to become tensor projections, circuit events, semantic categories, Qiskit artifacts, or fabric-length reports.
+9. Use `10.py` before external review, archiving, or model ingestion when a project should be bundled into a single Markdown file.
+10. Use `11.py` after a documentation bundle needs to be restored into a runnable source tree; provide `--asset-root` when PNG files must be recovered.
+11. Use `12.md` as the conceptual axiom source for systems that must remain aligned with `The Elements`.
+12. Keep the `10.py` and `11.py` bundle/export formats synchronized. If the section heading format, file metadata fields, or code-fence rules change in `10.py`, update the parser assumptions in `11.py`.
+13. Keep optional-render dependencies for `9.py` separate from its core text/JSON behaviour so the file remains usable even without Qiskit, matplotlib, or Pillow.
