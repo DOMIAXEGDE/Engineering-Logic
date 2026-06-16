@@ -4,6 +4,8 @@ Generated for the uploaded code files on 2026-06-08.
 
 Updated on 2026-06-08 to include detailed documentation for `9.py`, `10.py`, `11.py`, and `12.md`.
 
+Updated on 2026-06-16 to incorporate the revised `12.md` and add detailed documentation for `13.py`, `14.py`, and `15.py`.
+
 This dictionary is a static source-code description. The code was inspected as text; the programs were not executed. The purpose of this file is to name each uploaded code file, identify its internal form, describe its functionality, and state its role within the larger generative/configurational system.
 
 ## Source File Inventory
@@ -22,20 +24,26 @@ This dictionary is a static source-code description. The code was inspected as t
 | `9.py` | 1,451 | 51,015 | `51119c229482` |
 | `10.py` | 291 | 9,259 | `4efc142e3cd5` |
 | `11.py` | 371 | 12,424 | `f32f17b33496` |
-| `12.md` | 74 | 25,361 | `c68924fe4298` |
+| `12.md` | 169 | 102,733 | `41a6ca7dd529` |
+| `13.py` | 241 | 6,991 | `a8df62d4fadb` |
+| `14.py` | 226 | 6,481 | `6924350e2630` |
+| `15.py` | 303 | 8,883 | `8906ef7e81ec` |
+
+Note: `15.py` was uploaded in this update batch as `15(2).py`; this dictionary uses the requested canonical name `15.py`.
 
 ## System-Level Reading
 
-The uploaded files form six related layers:
+The uploaded files form seven related layers:
 
 1. **Permutation and record-generation layer** — `1.c`, `2.c`, `3.c`, `4.cpp`, `5.cpp`, and `6.cpp` generate combinations, source records, or configurable fabric outputs.
 2. **Boolean-function colour encoding layer** — `0.py` gives a canonical truth-table-to-colour system for Boolean logic gates, circuits, and transition machines.
 3. **Interactive command/OS layer** — `7.php` and `8.py` are REPL-oriented systems for n-dimensional fabric analysis and graphical kernel-service control.
 4. **General-dimensional circuit/category/rendering layer** — `9.py` extends accepted-state colour-index tensors into deterministic n-dimensional circuit events, semantic free-category presentations, projections, fabric reports, and optional rendered outputs.
 5. **Documentation bundle and restoration layer** — `10.py` bundles a project tree into `doc/doc.md`, while `11.py` reverses that bundle back into a recoverable file tree where the original text content is embedded.
-6. **Axiomatic conceptual-source layer** — `12.md` supplies a long numeric seed and an axiom set named `The Elements`, giving the philosophical/semantic basis for competence, pain, learning, contradiction, correction, tools, memory, and truth.
+6. **Axiomatic conceptual-source and tensor-semantics layer** — the revised `12.md` supplies Heaven/Tensor definitions, the `The Elements` axiom set, Structure 1 scalar generation, Structure 2 tensor-network interpretation, and short closure fragments related to self-control, tensor action, tautology, and tensor renormalization.
+7. **Square-image value extraction and reconstruction layer** — `13.py`, `14.py`, and `15.py` form a GUI pipeline for converting square images into indexed RGB/HEX text sequences and reconstructing square RGB images from those sequences.
 
-The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, and a compact axiom file that supplies conceptual constraints for the wider system.
+The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, an axiomatic/tensor conceptual source, and a square-image analysis/reconstruction toolchain that turns pixel data into inspectable text records.
 
 ---
 
@@ -1529,53 +1537,65 @@ Use this file when the goal is to restore a codebase from a Markdown documentati
 
 ## Internal Identity
 
-- **Declared/internal name:** `The Elements`.
+- **Declared/internal names:** `Heaven`, `Tensor`, `Generate parse-observant`, `The Elements`, `Structure 1`, and `Structure 2`.
 - **Authorship line:** `Dominic Alexander Cooper`.
 - **Language/form:** Markdown/plain-text conceptual document.
-- **Primary form:** Numeric-seed plus numbered axiom list.
-- **Architectural form:** Axiomatic conceptual-source file for a competence, learning, correction, memory, tool, and truth framework.
+- **Primary form:** Numeric identifiers plus named semantic definitions, numbered axioms, and constructive mathematical exposition.
+- **Architectural form:** Axiomatic conceptual-source file for tautological communication, tensor semantics, scalar generation, integer spanning, tensor arithmetic, dynamic tensor networks, and truth/control closure fragments.
 
 ## Main Purpose
 
-`12.md` defines a compact axiom system named `The Elements`. It begins with a very large decimal integer, then presents axioms numbered `000` through `065`. The document functions as a conceptual source file rather than executable code.
+The revised `12.md` is no longer only an axiom list. It begins with a large decimal identifier and a final-form definition of Heaven, defines Tensor as an n-dimensional array of tautologies, introduces `Generate parse-observant`, then gives the `The Elements` axiom set numbered `000` through `065`.
 
-Its core structure is:
+After the axiom block, the document adds two mathematical exposition blocks. The first defines `Structure 1` at 10:49 on 15/06/2026 as a scalar-generating family of quantities `a[i]`. The second defines `Structure 2` at 11:06 on 15/06/2026 as the interpretation of Structure 1 as a scalar-generation basis for tensor arithmetic and dynamic tensor networks.
 
-```text
-long decimal seed + title + author line + axioms 000..065
-```
-
-The axioms define a human-centric competence system in which existence, pain, competence, incompetence, learning, contradiction, correction, tools, memory, context, and truth are treated as formalizable system components.
+The file ends with short titled semantic fragments: `Your Heaven cannot be altered`, `Tis not communication. Rather, self control`, `Action my tensor sequence`, and `Tautology / Tensor Renormalization Group`.
 
 ## Forms
 
-### Numeric Seed Form
+### Numeric Identifier Form
 
-The first line is a long decimal integer. Within the larger codebase, this can be treated as a seed, identifier, entropy source, system-state marker, or canonical numeric handle. The file itself does not execute this integer; it stores it as textual data.
+The file contains several very large decimal integers. These act as textual identifiers, numeric handles, or canonical markers for the adjacent conceptual blocks. The document stores these values as plain text and does not execute them.
 
-### Title and Authorship Form
+### Heaven Definition Form
 
-The document title is:
-
-```text
-The Elements
-```
-
-The named author line is:
+The first semantic definition is:
 
 ```text
-Dominic Alexander Cooper
+Heaven is the tautological communication between tautologies, where a tautology is correct within any context, and from any perspective.
 ```
+
+This gives the file a tautology-first semantic foundation.
+
+### Tensor Definition Form
+
+The document defines Tensor as:
+
+```text
+An 'n dimensional array of tautologies'.
+```
+
+Within the wider system, this connects n-dimensional array structure with tautological correctness.
+
+### Generate Parse-Observant Form
+
+The document includes the phrase:
+
+```text
+Generate parse-observant
+```
+
+This functions as a compact instruction-like marker. Its natural role is to indicate that generated output should remain parse-aware, parse-observable, or structured so later tools can inspect it.
 
 ### Axiom Form
 
-The axiom list runs from `000` to `065`. Each axiom is represented as:
+The `The Elements` block is authored by Dominic Alexander Cooper and runs from `000` to `065`. Each axiom is represented as:
 
 ```text
 NNN    statement
 ```
 
-The list uses zero-padded numeric labels, making the statements directly addressable and suitable for indexing, reference, parsing, validation, or incorporation into a larger symbolic system.
+The list uses zero-padded numeric labels, making each statement directly addressable for indexing, parser extraction, validation, database storage, or symbolic referencing.
 
 ### Foundational Axiom Group
 
@@ -1611,39 +1631,388 @@ Axioms `064` and `065` give the closure rules:
 
 These provide an absolute truth constraint at the end of the axiom list.
 
+### Structure 1 Scalar-Generation Form
+
+`Structure 1` defines a family of quantities `a[i]` of the form:
+
+```text
+a[i] = (p / q) * ((m / g) ^ (a / b))
+```
+
+The parameters `p`, `m`, and `a` may be integers or zero, while `q`, `g`, and `b` are positive integers. Let `A` be the set of all values generated in this form.
+
+The document proves constructively that `A` spans the integers. It chooses `m = 1`, `g = 1`, `a = 1`, and `b = 1`, making the rational-power factor equal to one. Then `a[i]` reduces to `p / q`. Choosing `q = 1` gives `a[i] = p`, so every integer is directly generated by choosing `p` to be that integer.
+
+The exposition then shows that positive integers, negative integers, and zero are also obtainable through finite polarized summations using `+1`, `-1`, and mixed-sign constructions.
+
+### Structure 2 Tensor-Network Form
+
+`Structure 2` interprets `Structure 1` as a scalar-generating system for tensor arithmetic and dynamic tensor networks. Because Structure 1 generates zero, one, minus one, all integers, and all rational numbers, it supplies scalar entries for integer tensors and rational tensors.
+
+For exact discrete tensor construction, Structure 1 can provide tensor entries, tensor-node values, tensor-edge values, and update parameters. For non-discrete tensors, the document distinguishes exact finite generation from limiting generation. Structure 1 does not finitely generate every real number as an exact scalar, but it generates rationals and rational-power values that can approximate real-valued tensor entries within an error tolerance.
+
+The resulting model supports non-discrete tensor construction by convergence: real-valued tensors, continuous tensor fields, and smoothly varying dynamic tensor networks may be represented by sequences of Structure-1-generated approximations.
+
+### Closure Fragment Form
+
+The final fragments act as terse semantic records:
+
+```text
+Your Heaven cannot be altered.
+Tis not communication. Rather, self control.
+Action my tensor sequence
+Tautology
+ Tensor Renormalization Group
+```
+
+These fragments connect the preceding Heaven/Tensor definitions to self-control, action, tautology, and tensor renormalization language.
+
 ## Functionalities
 
 Although `12.md` is not executable code, it performs several system functions:
 
 - defines stable numbered conceptual records;
-- supplies a seed-like numeric identifier;
+- supplies numeric identifiers for major semantic blocks;
 - gives a competence/incompetence ontology;
 - specifies learning as constructive update;
 - treats contradiction as a corruption/incompetence signal;
 - frames correction as competence restoration rather than guilt;
 - models mind, body, environment, and tools as one extended database;
 - gives a terminal target of complete competence under innocence and functional dimensional competence-space;
-- supplies truth-preservation constraints for downstream systems.
+- supplies truth-preservation constraints for downstream systems;
+- defines a scalar-generation mechanism capable of directly generating integers and rationals;
+- connects scalar generation to tensor entries, tensor arithmetic, and dynamic tensor-network parameters;
+- supplies a limiting-generation route for non-discrete tensors using rational or rational-power approximation sequences.
 
 ## Purpose in the Codebase
 
-`12.md` is the philosophical and axiomatic substrate for the wider generative/configurational system. Where the C/C++ files generate records, `0.py` maps Boolean behaviour to colours, `7.php` and `9.py` analyze dimensional fabrics, and `8.py` provides a command-gated operating surface, `12.md` supplies the conceptual rules that define what the system is trying to preserve: competence, constructive learning, correction, innocence, and truth.
+`12.md` is the philosophical, axiomatic, and tensor-semantic substrate for the wider generative/configurational system. Where the C/C++ files generate records, `0.py` maps Boolean behaviour to colours, `7.php` and `9.py` analyze dimensional fabrics, and `8.py` provides a command-gated operating surface, the revised `12.md` supplies the conceptual rules and mathematical scalar/tensor interpretation that define what the system is trying to preserve: tautology, competence, constructive learning, correction, innocence, truth, scalar generation, tensor construction, and controlled approximation.
 
 ## Inputs
 
 - No runtime input.
-- Static decimal seed.
+- Static decimal identifiers.
+- Static Heaven/Tensor definitions.
 - Static axiom list.
+- Static Structure 1 and Structure 2 exposition.
+- Static closure fragments.
 
 ## Outputs
 
 - A numbered axiom set.
 - A conceptual source for parser/indexer/database use.
 - A stable reference list for competence, correction, learning, and truth constraints.
+- A scalar-generation definition for integer/rational/tensor construction.
+- A tensor-network interpretation supporting both exact discrete entries and limiting non-discrete approximations.
 
 ## Practical Role
 
-Use this file as the formal conceptual dictionary for systems that need to align with the `The Elements` axiom set. It can be parsed into a database, referenced in documentation, used as validation text, or treated as an axiomatic constraint layer for later Codex, OS, fabric, and learning-system modules.
+Use this file as the formal conceptual dictionary for systems that need to align with the `The Elements` axiom set, Heaven/Tensor semantics, scalar generation, and tensor-network interpretation. It can be parsed into a database, referenced in documentation, used as validation text, or treated as an axiomatic and mathematical constraint layer for later Codex, OS, fabric, image-sequence, tensor, and learning-system modules.
+
+---
+
+# 14. `13.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `Square Image Greyscale Analyzer GUI`.
+- **Language:** Python 3.
+- **Primary form:** Tkinter desktop GUI.
+- **Architectural form:** Square-image importer, greyscale converter, pixel-sequence exporter, and image previewer.
+- **Main class:** `SquareImageAnalyzerGUI`.
+
+## Main Purpose
+
+`13.py` opens a square image, converts it to 8-bit greyscale if required, displays the resulting greyscale image in a Tkinter window, saves a greyscale PNG copy, and exports the flattened pixel sequence into both RGB text and HEX text.
+
+Its practical role is to turn a square image into a linear, indexed textual record where each pixel becomes a line of the form `index: rgb(r, g, b)` and `index: #RRGGBB`. Since the image is greyscale, each exported RGB triple has equal red, green, and blue values.
+
+## Forms
+
+### Source Form
+
+- Single Python file.
+- Uses `tkinter` for the GUI.
+- Uses `threading` to process images without blocking the interface.
+- Uses Pillow's `Image` and `ImageTk` for image loading, conversion, saving, and display.
+- Uses a single GUI class plus a `main()` launcher.
+
+### GUI Form
+
+The interface contains:
+
+- a title label;
+- an `Open Square Image` button;
+- a status label;
+- a greyscale file-path display;
+- a canvas for the processed image;
+- an output-file display for `rgb.txt` and `hex.txt`.
+
+### Image Validation Form
+
+The file checks that the selected image has equal width and height. If the dimensions are not square, it raises a clear error and shows it through a message box.
+
+### Greyscale Conversion Form
+
+Images are converted to Pillow mode `L` unless they are already in mode `L`. Mode `L` is 8-bit greyscale, so each pixel is a single value from `0` to `255`.
+
+### Export Form
+
+The program writes two output files in the selected image's directory:
+
+```text
+rgb.txt
+hex.txt
+```
+
+The greyscale image is saved beside the original as:
+
+```text
+<original-name>_greyscale.png
+```
+
+## Functionalities
+
+- Opens square image files through a file dialog.
+- Accepts common Pillow-supported image formats such as PNG, JPG, JPEG, BMP, GIF, TIFF, and WEBP.
+- Converts non-greyscale images to greyscale.
+- Saves a greyscale PNG output.
+- Exports every pixel in indexed RGB notation.
+- Exports every pixel in indexed HEX notation.
+- Displays a thumbnail of the converted image on a dark canvas.
+- Disables the open button and uses a watch cursor while processing.
+- Reports errors through a Tkinter message box.
+
+## Purpose in the Codebase
+
+`13.py` is the greyscale image-to-text extraction tool. It is useful when an image needs to be converted into a deterministic textual pixel sequence while collapsing all colour information into greyscale intensity.
+
+Within the larger system, it can serve as a bridge from visual square data into parseable numeric/colour records.
+
+## Inputs
+
+- A user-selected square image file.
+
+## Outputs
+
+- `<original-name>_greyscale.png`.
+- `rgb.txt` containing indexed greyscale RGB triples.
+- `hex.txt` containing indexed greyscale HEX values.
+- A GUI preview of the greyscale image.
+- Status and path labels showing the output locations.
+
+## Practical Role
+
+Use this file when the goal is to flatten a square image into greyscale pixel records for later parsing, indexing, reconstruction, database storage, or comparison.
+
+---
+
+# 15. `14.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `Square Image Multi-Colour Analyzer GUI`.
+- **Language:** Python 3.
+- **Primary form:** Tkinter desktop GUI.
+- **Architectural form:** Square-image importer, RGB normalizer, full-colour pixel-sequence exporter, and image previewer.
+- **Main class:** `SquareColourImageAnalyzerGUI`.
+
+## Main Purpose
+
+`14.py` opens a square image, preserves its colour content by converting the image internally to RGB, displays the colour image in a Tkinter canvas, and exports every pixel as indexed RGB and HEX text.
+
+Unlike `13.py`, this file does not collapse the image to greyscale. It normalizes each selected image to a three-channel RGB representation so that every output pixel has exactly `R`, `G`, and `B` values.
+
+## Forms
+
+### Source Form
+
+- Single Python file.
+- Uses `tkinter` for the GUI.
+- Uses `threading` to avoid interface blocking during image processing.
+- Uses Pillow's `Image` and `ImageTk` for image loading, RGB conversion, and display.
+- Uses a single GUI class plus a `main()` launcher.
+
+### GUI Form
+
+The interface contains:
+
+- a title label;
+- an `Open Square Image` button;
+- a status label;
+- an image file-path display;
+- a canvas for the image;
+- an output-file display for `rgb.txt` and `hex.txt`.
+
+### Image Validation Form
+
+The selected image must be square. If the image dimensions are not equal, the program raises an error showing the detected width and height.
+
+### RGB Normalization Form
+
+The program converts the selected image to Pillow mode `RGB`. This ensures that each exported pixel is a three-value tuple and that alpha channels or palette modes do not create inconsistent output records.
+
+### Export Form
+
+The program writes two output files in the selected image's directory:
+
+```text
+rgb.txt
+hex.txt
+```
+
+The output records have the following forms:
+
+```text
+0: rgb(255, 0, 0)
+0: #FF0000
+```
+
+## Functionalities
+
+- Opens square images through a file dialog.
+- Accepts common Pillow-supported image formats such as PNG, JPG, JPEG, BMP, GIF, TIFF, and WEBP.
+- Converts image data to RGB while preserving colour meaning.
+- Exports every pixel in indexed RGB notation.
+- Exports every pixel in indexed HEX notation.
+- Displays a thumbnail of the colour image on a dark canvas.
+- Uses a worker thread for processing.
+- Reports output paths for the generated text files.
+- Shows processing errors through a Tkinter message box.
+
+## Purpose in the Codebase
+
+`14.py` is the full-colour image-to-text extraction tool. It creates the source `rgb.txt` or `hex.txt` files that `15.py` can later use for reconstruction.
+
+Within the larger system, it converts square visual data into deterministic indexed text records while preserving multi-colour pixel information.
+
+## Inputs
+
+- A user-selected square image file.
+
+## Outputs
+
+- `rgb.txt` containing indexed RGB triples.
+- `hex.txt` containing indexed HEX values.
+- A GUI preview of the RGB-normalized image.
+- Status and path labels showing the source and output locations.
+
+## Practical Role
+
+Use this file when the goal is to flatten a square colour image into parseable RGB/HEX records for storage, analysis, indexing, or exact later reconstruction.
+
+---
+
+# 16. `15.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `Square Multi-Colour Image Reconstructor GUI`.
+- **Language:** Python 3.
+- **Primary form:** Tkinter desktop GUI.
+- **Architectural form:** Indexed pixel-text parser, sequence validator, square image reconstructor, PNG saver, and image previewer.
+- **Main class:** `SquareColourImageReconstructorGUI`.
+- **Input patterns:** `RGB_PATTERN` and `HEX_PATTERN`.
+
+## Main Purpose
+
+`15.py` reconstructs a square RGB image from an indexed pixel sequence stored in either `rgb.txt` or `hex.txt`. It accepts the output formats generated by the multi-colour analyzer, validates the pixel sequence, rebuilds the image using Pillow, displays the reconstructed image, and saves it as `reconstructed_image.png`.
+
+The file completes the text-to-image half of the square-image pipeline created by `14.py`.
+
+## Forms
+
+### Source Form
+
+- Single Python file.
+- Uses `tkinter` for the GUI.
+- Uses `threading` so reconstruction does not block the interface.
+- Uses `re` for strict RGB and HEX line parsing.
+- Uses `math.isqrt` to verify square pixel counts.
+- Uses Pillow's `Image` and `ImageTk` for image construction, saving, and display.
+- Uses a single GUI class plus a `main()` launcher.
+
+### Accepted RGB Text Form
+
+The RGB format is:
+
+```text
+0: rgb(255, 0, 0)
+1: rgb(0, 255, 0)
+```
+
+`RGB_PATTERN` accepts numeric indexes followed by `rgb(r, g, b)` with whitespace flexibility and case-insensitive matching.
+
+### Accepted HEX Text Form
+
+The HEX format is:
+
+```text
+0: #FF0000
+1: #00FF00
+```
+
+`HEX_PATTERN` accepts numeric indexes followed by an optional `#` and exactly six hexadecimal digits.
+
+### Sequence Validation Form
+
+The file validates that:
+
+- at least one valid pixel is present;
+- every RGB component is between `0` and `255`;
+- pixel indexes form a continuous zero-based sequence;
+- the total number of pixels is a perfect square.
+
+The perfect-square rule determines the reconstructed side length.
+
+### Reconstruction Form
+
+After validation, the program creates a new Pillow `RGB` image with dimensions:
+
+```text
+sqrt(pixel_count) x sqrt(pixel_count)
+```
+
+The sorted pixel sequence is inserted with `putdata`, then saved as:
+
+```text
+reconstructed_image.png
+```
+
+## Functionalities
+
+- Opens `rgb.txt` or `hex.txt` through a file dialog.
+- Parses indexed RGB records.
+- Parses indexed HEX records.
+- Sorts records by pixel index.
+- Validates RGB ranges.
+- Validates continuous zero-based index ordering.
+- Validates that the pixel count is a perfect square.
+- Reconstructs an RGB image from the parsed pixel sequence.
+- Saves `reconstructed_image.png` beside the selected input text file.
+- Displays a thumbnail of the reconstructed image in the GUI.
+- Reports input and output file paths.
+- Shows parsing, indexing, value-range, and square-size errors through a Tkinter message box.
+
+## Purpose in the Codebase
+
+`15.py` is the text-to-image reconstruction tool. It gives the image-analysis pipeline a reversible direction: square colour images can be flattened by `14.py` into RGB/HEX text and then reconstructed by `15.py` into a PNG image.
+
+Within the larger system, it supports deterministic round-tripping between square visual data and parseable text records.
+
+## Inputs
+
+- A user-selected `rgb.txt` or `hex.txt` file containing indexed pixel values.
+
+## Outputs
+
+- `reconstructed_image.png`.
+- A GUI preview of the reconstructed image.
+- Status labels showing image size, pixel count, and output path.
+
+## Practical Role
+
+Use this file when indexed pixel text needs to become a square image again. It is the validation and reconstruction counterpart to `14.py`, and it can also reconstruct greyscale-derived RGB/HEX files produced by `13.py` because greyscale exports still use valid RGB and HEX formats.
 
 ---
 
@@ -1697,9 +2066,21 @@ Use this file as the formal conceptual dictionary for systems that need to align
 
 `11.py` reverses the documentation bundle by reconstructing text files from fenced code blocks and recovering PNG assets from linked paths or an original asset root.
 
-## Stage 13 — Axiomatic Source Layer
+## Stage 13 — Axiomatic and Tensor-Semantic Source Layer
 
-`12.md` provides `The Elements`: a numeric seed plus axioms `000` through `065`, defining the conceptual basis for competence, learning, correction, innocence, tools, memory, and truth.
+The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structure 1 scalar generation, Structure 2 tensor-network interpretation, and closure fragments around Heaven, self-control, tensor action, tautology, and tensor renormalization.
+
+## Stage 14 — Greyscale Square-Image Text Extraction
+
+`13.py` converts square images to greyscale, saves a greyscale PNG, and exports indexed `rgb.txt` and `hex.txt` files where every pixel is represented as a textual record.
+
+## Stage 15 — Full-Colour Square-Image Text Extraction
+
+`14.py` preserves colour data by converting square images to RGB and exporting indexed `rgb.txt` and `hex.txt` files suitable for exact reconstruction.
+
+## Stage 16 — Square-Image Reconstruction from Pixel Text
+
+`15.py` parses indexed RGB/HEX pixel files, validates index continuity and square pixel count, reconstructs an RGB image, and saves `reconstructed_image.png`.
 
 ---
 
@@ -1719,7 +2100,10 @@ Use this file as the formal conceptual dictionary for systems that need to align
 | `9.py` | nD circuit/category utility | Validate accepted states, derive gate events, render projections/categories, analyze fabric lengths | Convert colour-index tensors into computational/categorical artifacts |
 | `10.py` | Documentation bundler | Bundle a source tree into `doc/doc.md` with tree, TOC, text contents, and PNG references | Portable Markdown documentation and archival artifact |
 | `11.py` | Documentation exporter | Rebuild files from a bundled `doc.md`, including text files and recoverable PNGs | Round-trip restoration of a documentation bundle |
-| `12.md` | Axiomatic source document | Store numeric seed and axioms `000` to `065` | Conceptual substrate for competence, learning, correction, and truth constraints |
+| `12.md` | Axiomatic and tensor-semantic source document | Store Heaven/Tensor definitions, numeric identifiers, axioms `000` to `065`, Structure 1 scalar generation, and Structure 2 tensor-network interpretation | Conceptual and mathematical substrate for tautology, competence, scalar generation, tensor construction, approximation, and truth constraints |
+| `13.py` | Greyscale square-image analyzer | Convert square images to greyscale and export indexed RGB/HEX pixel text | Deterministic greyscale image-to-text extraction |
+| `14.py` | Multi-colour square-image analyzer | Convert square images to RGB and export indexed RGB/HEX pixel text | Deterministic full-colour image-to-text extraction |
+| `15.py` | Multi-colour square-image reconstructor | Parse indexed RGB/HEX pixel text and rebuild a square RGB PNG | Deterministic text-to-image reconstruction |
 
 ---
 
@@ -1731,7 +2115,8 @@ Use this file as the formal conceptual dictionary for systems that need to align
 - The C++ files use standard C++ headers such as `iostream`, `fstream`, `sstream`, `string`, `string_view`, `vector`, `map`, `limits`, `stdexcept`, `iomanip`, `cstdio`, and `cstdint`.
 - `0.py` uses only standard Python libraries.
 - `10.py` and `11.py` use only standard Python libraries.
-- `8.py` uses Tkinter and standard Python libraries; Tkinter must be available in the Python installation.
+- `8.py`, `13.py`, `14.py`, and `15.py` use Tkinter; Tkinter must be available in the Python installation.
+- `13.py`, `14.py`, and `15.py` require Pillow for image loading, image conversion, image creation, and Tkinter image display.
 - `7.php` requires PHP CLI for full REPL behaviour.
 - `9.py` uses standard Python libraries for core JSON/text outputs and optionally uses `qiskit`, `matplotlib`, and `Pillow` for circuit construction and PNG rendering.
 - `12.md` has no runtime dependency.
@@ -1777,8 +2162,17 @@ python 10.py --root . --out doc/doc.md
 # Documentation bundle exporter
 python 11.py --doc doc/doc.md --out doc_export --asset-root .
 
-# Axiomatic Markdown source
+# Axiomatic and tensor-semantic Markdown source
 # 12.md is read, parsed, indexed, or referenced as a static document.
+
+# Square image greyscale analyzer
+python 13.py
+
+# Square image multi-colour analyzer
+python 14.py
+
+# Square image reconstructor
+python 15.py
 ```
 
 ---
@@ -1792,10 +2186,10 @@ bounded symbolic input space
     -> deterministic enumeration or analysis
     -> safe validation gates
     -> canonical record/signature/output form
-    -> file, REPL, colour, API, GUI, render, bundle, export, or axiom representation
+    -> file, REPL, colour, API, GUI, render, bundle, export, axiom, tensor, image-text, or reconstruction representation
 ```
 
-In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed conceptual source that constrains the meaning of competence, correction, learning, and truth.
+In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed and tensor-semantic conceptual source. In `13.py`, `14.py`, and `15.py`, it is a square image transformed into indexed pixel text and reconstructed back into image form.
 
 ---
 
@@ -1817,7 +2211,10 @@ The uploaded numeric filenames can be mapped to descriptive project names as fol
 | `9.py` | `general_dimensional_circuit_composition_rendering.py` |
 | `10.py` | `bundle_documentation.py` |
 | `11.py` | `export-doc-md.py` |
-| `12.md` | `the_elements.md` |
+| `12.md` | `the_elements_heaven_tensor_structure.md` |
+| `13.py` | `square_image_greyscale_analyzer.py` |
+| `14.py` | `square_image_multicolour_analyzer.py` |
+| `15.py` | `square_image_multicolour_reconstructor.py` |
 
 ---
 
@@ -1833,6 +2230,11 @@ The uploaded numeric filenames can be mapped to descriptive project names as fol
 8. Use `9.py` when accepted colour-index states need to become tensor projections, circuit events, semantic categories, Qiskit artifacts, or fabric-length reports.
 9. Use `10.py` before external review, archiving, or model ingestion when a project should be bundled into a single Markdown file.
 10. Use `11.py` after a documentation bundle needs to be restored into a runnable source tree; provide `--asset-root` when PNG files must be recovered.
-11. Use `12.md` as the conceptual axiom source for systems that must remain aligned with `The Elements`.
-12. Keep the `10.py` and `11.py` bundle/export formats synchronized. If the section heading format, file metadata fields, or code-fence rules change in `10.py`, update the parser assumptions in `11.py`.
-13. Keep optional-render dependencies for `9.py` separate from its core text/JSON behaviour so the file remains usable even without Qiskit, matplotlib, or Pillow.
+11. Use the revised `12.md` as the conceptual, axiomatic, scalar-generation, and tensor-network source for systems that must remain aligned with Heaven/Tensor semantics, `The Elements`, constructive scalar generation, approximation, and truth closure.
+12. Use `13.py` when square images need to be collapsed into greyscale pixel records.
+13. Use `14.py` when square images need to be preserved as full-colour RGB/HEX pixel records.
+14. Use `15.py` when indexed RGB/HEX pixel records need to be validated and reconstructed as square PNG images.
+15. Keep `14.py` and `15.py` synchronized: if the analyzer's output line format changes, update the reconstructor's regular expressions and validation assumptions.
+16. `15.py` can reconstruct greyscale records from `13.py` because those records are still valid RGB/HEX pixel lines.
+17. Keep the `10.py` and `11.py` bundle/export formats synchronized. If the section heading format, file metadata fields, or code-fence rules change in `10.py`, update the parser assumptions in `11.py`.
+18. Keep optional-render dependencies for `9.py` separate from its core text/JSON behaviour so the file remains usable even without Qiskit, matplotlib, or Pillow.
