@@ -8,6 +8,8 @@ Updated on 2026-06-16 to incorporate the revised `12.md` and add detailed docume
 
 Updated on 2026-06-18 to include `PowerShell_Workstation_profile.ps1`, the completed deterministic basis-tensor implementation `16.cpp`, its runnable `17.txt`/`19.txt`/`20.txt` seed workflow artifacts, the tutorial `17_tutorial.md`, and the prompt-source documents `18.md` and `21.md`.
 
+Updated on 2026-06-18 to include the terminal-only basis-tensor REPL `22.py`, the Tensor text digestion tool `23.py`, the reformatted-text export/composition tool `24.py`, and the integrated Tensor REPL/process-flow host `25.py`.
+
 This dictionary is a static source-code description. The code was inspected as text; the programs were not executed. The purpose of this file is to name each uploaded code file, identify its internal form, describe its functionality, and state its role within the larger generative/configurational system.
 
 ## Source File Inventory
@@ -38,12 +40,16 @@ This dictionary is a static source-code description. The code was inspected as t
 | `19.txt` | 3 | 12 | `cee5cc676160` |
 | `20.txt` | 159 | 6,208 | `013bca8f00ce` |
 | `21.md` | 479 | 30,850 | `14371ec2babc` |
+| `22.py` | 946 | 37,921 | `0b9da667335c` |
+| `23.py` | 1,430 | 58,576 | `c024eb4069d6` |
+| `24.py` | 1,219 | 50,906 | `7c217fb457da` |
+| `25.py` | 1,548 | 69,469 | `7a26a6c70aa6` |
 
 Note: `15.py` was uploaded in this update batch as `15(2).py`; this dictionary uses the requested canonical name `15.py`.
 
 ## System-Level Reading
 
-The uploaded files form ten related layers:
+The uploaded files form twelve related layers:
 
 1. **Permutation and record-generation layer** — `1.c`, `2.c`, `3.c`, `4.cpp`, `5.cpp`, and `6.cpp` generate combinations, source records, or configurable fabric outputs.
 2. **Boolean-function colour encoding layer** — `0.py` gives a canonical truth-table-to-colour system for Boolean logic gates, circuits, and transition machines.
@@ -55,8 +61,10 @@ The uploaded files form ten related layers:
 8. **Engineering workstation shell layer** - `PowerShell_Workstation_profile.ps1` defines a PowerShell workstation cockpit with deterministic paths, module/bootstrap helpers, cloud context helpers, HPC/simulation/rendering dispatch functions, AI helper commands, aliases, and a startup pipeline.
 9. **Deterministic basis-tensor and seed-address layer** - `16.cpp`, `17.txt`, `19.txt`, and `20.txt` implement and demonstrate finite raw tensor-row spaces, least-residue tensor datasets, Structure-1 symbolic scalar metadata, exact row/basis ranking, and seed-based reconstruction of `B_raw`.
 10. **Prompt and tutorial layer for basis-tensor generation** - `18.md`, `21.md`, and `17_tutorial.md` record the iterative prompt-specification path and provide a practical tutorial for writing `17.txt` configurations.
+11. **Basis-tensor REPL orchestration layer** - `22.py` provides a terminal-only control surface for loading `17.txt`-style configs, building from `19.txt`-style seeds, inspecting tensor tables, and exporting `20.txt`-style results.
+12. **Tensor text digestion/composition layer** - `23.py`, `24.py`, and `25.py` form a text-to-Tensor-to-export workflow: arbitrary text is digested into structured Tensor workspaces, selected records are composed back into reformatted text/data, and the integrated REPL can run both flows in-process.
 
-The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, an axiomatic/tensor conceptual source, a square-image analysis/reconstruction toolchain, and finally a mathematically stricter basis-tensor seed-address workflow supported by workstation automation.
+The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, an axiomatic/tensor conceptual source, a square-image analysis/reconstruction toolchain, a mathematically stricter basis-tensor seed-address workflow supported by workstation automation, and a newer family of Python REPL/format/compose utilities for making Tensor workspaces operational from text.
 
 ---
 
@@ -2483,6 +2491,512 @@ a_i = (p / q) * ((m / g) ^ (alpha / beta))
 
 ---
 
+# 25. `22.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `22.py`.
+- **Language:** Python 3.
+- **Primary form:** Terminal-only command-line REPL.
+- **Architectural form:** Finite basis-tensor engine plus REPL dispatcher, with no Tkinter GUI or window state.
+
+## Main Purpose
+
+`22.py` is a command-line operational shell for the finite basis-tensor workflow around `16.cpp`, `17.txt`, `19.txt`, and `20.txt`. It loads a `17.txt`-style JSON configuration, builds raw/residue tensor blocks from inline instances or seed records, prints summaries/tables/grids, exports `20.txt`-style text, saves parse-observable JSON, and can run command scripts.
+
+It is explicitly finite and exact. Its seed sequence addresses `B_raw` as metadata; it does not treat the seed as a tensor coordinate and does not claim exact generation of uncountable structures.
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses only standard libraries such as `argparse`, `json`, `math`, `os`, `shlex`, `subprocess`, and dataclasses.
+- Provides batch and interactive modes.
+- Replaces the earlier GUI idea with a command-line-only REPL.
+
+### Data Model Form
+
+The main dataclasses/classes are:
+
+- `ComponentSpec` — describes each component alphabet, length policy, and mapping type.
+- `ScalarInfo` — stores Structure-1 symbolic scalar metadata.
+- `RowResult` — stores one decoded tensor row, raw ids, residues, component strings, and scalar information.
+- `SeedBlock` — stores one seed-derived block and its row results.
+- `TensorEngine` — owns configuration loading, seed decoding, row-space construction, summaries, tables, grids, and exports.
+- `TensorRepl` — parses commands and dispatches them to the engine.
+
+### REPL Form
+
+The command set includes:
+
+- `load-config`
+- `load-seeds`
+- `build-seeds`
+- `build-inline`
+- `show-config`
+- `show-domains`
+- `summary`
+- `table`
+- `grid`
+- `clear`
+- `export-20`
+- `save-json`
+- `set seed-mode`
+- `set seed-length`
+- `set seed-file`
+- `set basis-out`
+- `set output-path`
+- `run-script`
+- `compile16`
+- `selftest16`
+
+## Functionalities
+
+### Configuration Loading
+
+The program loads a `17.txt`-style JSON file, resolves paths relative to the script directory, validates component domains, and derives finite row-space properties.
+
+### Seed Handling
+
+It reads `19.txt`-style seed records, supports strict or wrap seed behavior, computes finite seed-address spaces, and reconstructs deterministic row ordinals from seed values.
+
+### Tensor Inspection
+
+It can print:
+
+- domain summaries;
+- row-space and seed-space summaries;
+- raw/residue tensor tables;
+- compact residue grids.
+
+### Export
+
+It writes `20.txt`-style seed-build text and parse-observable JSON output for downstream auditing or ingestion.
+
+### Scripted Operation
+
+The REPL can execute command scripts where blank lines and comment lines are ignored. This makes repeatable terminal workflows possible without a GUI.
+
+## Purpose in the Codebase
+
+`22.py` is the Python REPL control surface for the finite basis-tensor workflow. It sits beside `16.cpp` as a practical operator tool: `16.cpp` is the compiled exact generator, while `22.py` is the interactive/scriptable inspection and export environment for the same conceptual model.
+
+## Inputs
+
+- `17.txt`-style JSON configuration files.
+- `19.txt`-style seed-record files.
+- Inline instances from a configuration.
+- REPL commands.
+- REPL command scripts.
+
+## Outputs
+
+- Terminal summaries, tables, and grids.
+- `20.txt`-style seed-build text.
+- Parse-observable JSON files.
+- Optional output from compiling or self-testing `16.cpp`.
+
+## Practical Role
+
+Use `22.py` when the basis-tensor seed workflow needs to be inspected, driven, or exported from a terminal session without opening a GUI.
+
+---
+
+# 26. `23.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `format_paste.py`.
+- **Language:** Python 3.
+- **Primary form:** Command-line text formatter/digester.
+- **Architectural form:** Tensor-compatible workspace generator with configurable segmentation, category mapping, pointer generation, deduplication, and multi-format output rendering.
+
+## Main Purpose
+
+`23.py` turns arbitrary source text into Tensor-compatible import data. It segments text into document, paragraph, sentence, word, line, code block, code line, heading, list-item, and pointer entries, then emits one of several Tensor-compatible output formats.
+
+Its purpose is to make pasted or file-based prose/code digestible by the bank/register/address Tensor tools without manually writing Tensor records.
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses standard Python libraries only.
+- Defines a default Tensor parser/output configuration and a default format profile.
+- Can be used as a module by `24.py` and `25.py`.
+
+### Workspace Form
+
+The main models are:
+
+- `Entry` — one bank/register/address value with raw ids, title, and metadata.
+- `Bank` — a collection of register/address entries.
+- `Workspace` — the whole Tensor-compatible workspace.
+- `Segment` — an intermediate source-text segment before it becomes a Tensor entry.
+
+### Profile Form
+
+The default profile governs:
+
+- bank id/title/raw id;
+- category enablement;
+- category-to-register mapping;
+- heading/list/code/sentence/word regexes;
+- addressing start/step behavior;
+- value selection rules;
+- pointer generation rules;
+- dedupe scope and value normalization.
+
+## Functionalities
+
+### Text Segmentation
+
+The formatter detects fenced code blocks, optional indented code, paragraphs, sentences, words, lines, headings, and list items. It tracks line/character spans and parent-child metadata.
+
+### Non-Entry-Duplication Discipline
+
+`23.py` deduplicates both source segments and final entries. It fingerprints category/parent/span/value data and reserves addresses so duplicate or conflicting records do not overwrite meaningful entries.
+
+### Pointer Generation
+
+The pointer layer can generate sequence and category-index relations. Pointer entries allow downstream tools to reconstruct order, parent/child structure, and grouped category selections.
+
+### Rendering
+
+Supported output formats include:
+
+- `tensor_text`
+- `databank_text`
+- `json_workspace`
+- `json_records`
+- `csv_records`
+- `jsonl`
+- `markdown`
+- `summary`
+- `dot`
+
+### CLI Options
+
+Important command-line controls include:
+
+- `--input`
+- `--text`
+- `--output`
+- `--format`
+- `--tensor-config`
+- `--profile`
+- `--write-default-profile`
+- `--write-effective-profile`
+- `--write-effective-tensor-config`
+- `--categories`
+- `--bank-id`
+- `--bank-title`
+- `--no-pointers`
+- `--pointer-rule`
+- `--set-profile`
+- `--set-tensor-config`
+
+## Purpose in the Codebase
+
+`23.py` is the text-data-reformatted digestion tool. It converts loose human text, Markdown-like text, or code snippets into structured Tensor workspaces that can be loaded, queried, composed, rendered, or further transformed.
+
+## Inputs
+
+- Inline text.
+- One or more input text files.
+- Optional format profile JSON.
+- Optional Tensor config JSON.
+- CLI override paths and JSON values.
+
+## Outputs
+
+- Tensor-compatible text or JSON/CSV/JSONL records.
+- Markdown summaries.
+- DOT graph output.
+- Effective profile/config JSON files when requested.
+
+## Practical Role
+
+Use `23.py` when raw text must become addressable, categorized, metadata-rich Tensor records without hand-authoring bank/register/address blocks.
+
+---
+
+# 27. `24.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `compose.py`.
+- **Language:** Python 3.
+- **Primary form:** Command-line composer/exporter for formatted Tensor data.
+- **Architectural form:** Workspace loader, metadata enricher, source selector, deduplicating filter/transform pipeline, templated renderer, and multi-output exporter.
+
+## Main Purpose
+
+`24.py` consumes formatted output from `23.py` or compatible Tensor workspace formats, selects entries, optionally follows pointer relations, applies transforms, and renders custom text/code or Tensor-compatible export files.
+
+It is the reformatted-text-data export stage: where `23.py` turns text into records, `24.py` turns selected records back into purposeful text/data outputs.
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses standard Python libraries only.
+- Imports `format_paste` when available and falls back to loading local `23.py`.
+- Provides a default compose configuration with source filters, pointer selection, transforms, templates, outputs, and optional plugins.
+
+### Input/Output Form
+
+Accepted input formats include:
+
+- `auto`
+- `tensor_text`
+- `databank_text`
+- `json_workspace`
+- `json_records`
+- `csv_records`
+- `jsonl`
+- `markdown`
+- `dot`
+
+Supported output formats include:
+
+- `custom`
+- `tensor_text`
+- `databank_text`
+- `json_workspace`
+- `json_records`
+- `csv_records`
+- `jsonl`
+- `markdown`
+- `summary`
+- `dot`
+
+### Pointer-Aware Form
+
+The `PointerInfo` model parses pointer entries and supports source modes such as:
+
+- ordinary entries;
+- pointer entries;
+- pointer targets;
+- pointer sources.
+
+Pointer filters can use relation, pointer-rule name, source ref, source category, target category, and uniqueness constraints.
+
+## Functionalities
+
+### Workspace Loading
+
+The tool loads one or more formatted input files, detects or applies an input format, and merges incoming workspaces.
+
+### Metadata Enrichment
+
+It infers missing category metadata from configured register mappings and enriches entries with ordinals, keys, parent/ancestor relationships, and pointer-related fields.
+
+### Non-Entry-Duplication Discipline
+
+`24.py` keeps entry insertion and selected output sequences deduplicated. Conflicts can be resolved with next-free addresses, and source selections can be deduped before rendering.
+
+### Source Selection
+
+The compose source can filter by:
+
+- category;
+- register;
+- full reference;
+- value regex;
+- pointer relation/rule/source/target data.
+
+### Transform and Template Rendering
+
+Entry values can be transformed and rendered through templates using fields such as `{ref}`, `{value}`, `{category}`, `{bank}`, `{register}`, `{address}`, `{ordinal}`, `{meta.key}`, `{meta.parent_key}`, `{bank_title}`, and `{json}`.
+
+### Plugins
+
+Optional plugin entries can run before output rendering, giving the compose stage an extension point for custom workspace transforms.
+
+### CLI Options
+
+Important command-line controls include:
+
+- `--input`
+- `--input-format`
+- `--config`
+- `--tensor-config`
+- `--write-default-config`
+- `--write-effective-config`
+- `--set`
+- `--output`
+- `--format`
+- `--category`
+- `--register`
+- `--ref`
+- `--value-regex`
+- `--source-mode`
+- `--pointer-relation`
+- `--pointer-rule`
+- `--source-ref`
+- `--source-category`
+- `--target-category`
+- `--entry-template`
+- `--join`
+
+## Purpose in the Codebase
+
+`24.py` is the export/composition counterpart to `23.py`. It is used when a structured Tensor workspace must be filtered, reassembled, templated, or converted back into an external text/data artifact.
+
+## Inputs
+
+- Formatted files generated by `23.py`.
+- Tensor workspace JSON/text/CSV/Markdown/DOT formats.
+- Compose configuration JSON.
+- Tensor configuration JSON.
+- CLI filter/template/transform overrides.
+
+## Outputs
+
+- Custom text/code exports.
+- Tensor-compatible exports.
+- JSON/CSV/JSONL/Markdown/Summary/DOT renderings.
+- Effective compose configuration files when requested.
+
+## Practical Role
+
+Use `24.py` when Tensor entries need to become a curated export: code lines, paragraph reconstructions, category-specific lists, filtered datasets, or custom text templates.
+
+---
+
+# 28. `25.py`
+
+## Internal Identity
+
+- **Declared/internal name:** `tensor.py`.
+- **Language:** Python 3.
+- **Primary form:** Full command-line Tensor REPL and noninteractive parser/exporter.
+- **Architectural form:** Configurable bank/register/address parser, resolver, transformer, renderer, mutable workspace REPL, and in-process host for `23.py`/`24.py` process flows.
+
+## Main Purpose
+
+`25.py` is the central Tensor command-line environment. It imports Tensor-compatible data, stores it as banks/registers/addresses, resolves references, applies processing pipelines, renders multiple output formats, and exposes a REPL for interactive editing, querying, search, and export.
+
+The current version also integrates `23.py` and `24.py` as essential REPL process flows: `:digest` and `:digest-text` run text-data digestion into the active workspace, while `:compose` renders reformatted exports from the active/materialized workspace.
+
+## Forms
+
+### Source Form
+
+- Single Python script.
+- Uses only standard Python libraries.
+- Provides both REPL and noninteractive CLI entrypoints.
+- Loads local `23.py` as `format_paste` and local `24.py` as `compose_flow` when digest/compose commands are used.
+
+### Data Model Form
+
+The major classes are:
+
+- `Entry` — a bank/register/address value plus raw ids and metadata.
+- `Bank` — a titled bank of register/address entries.
+- `Workspace` — mutable Tensor workspace with undo snapshots.
+- `TensorParser` — configurable input parser.
+- `TensorResolver` — reference resolver with circular/depth handling.
+- `TensorRenderer` — renderer for JSON, JSONL, CSV, Markdown, tensor text, databank text, summary, and DOT.
+- `TensorCLI` — interactive command dispatcher.
+
+### Input Format Form
+
+The default config includes input formats for:
+
+- `tensor-block-v1`
+- `databank-register-v1`
+- `json-workspace-v1`
+- `json-records-v1`
+- `csv-records-v1`
+
+### REPL Form
+
+Core REPL commands include:
+
+- `:help`
+- `:formats`
+- `:config show|get|set|load|save`
+- `:load`
+- `:digest`
+- `:digest-text`
+- `:compose`
+- `:summary`
+- `:show`
+- `:open`
+- `:ls`
+- `:get`
+- `:set`
+- `:del`
+- `:resolve`
+- `:search`
+- `:pipeline show|add|clear`
+- `:mode raw|resolve`
+- `:export`
+- `:undo`
+- `:clear`
+- `:q`
+
+## Functionalities
+
+### Parsing and Loading
+
+`25.py` can parse block-style Tensor text, Data Bank Manager-style register text, JSON workspace files, JSON record lists, and CSV record files.
+
+### Workspace Editing
+
+The REPL can open/create banks, set and delete values, maintain undo snapshots, search data, and inspect individual references.
+
+### Reference Resolution
+
+The resolver recognizes prefixed full references, full bank/register/address references, two-part references, and local register/address references depending on configuration.
+
+### Processing Pipeline
+
+Available processing operations include trim, lower, upper, resolve, regex replacement, prefix, suffix, token count, character count, and drop-empty.
+
+### Rendering and Export
+
+Output formats include JSON, JSONL, CSV, Markdown, tensor text, databank text, summary, and DOT.
+
+### Integrated Digestion Flow
+
+The `:digest` and `:digest-text` commands call into `23.py` in-process. They support profile overrides, category selection, pointer controls, bank id/title overrides, merge mode, pointer-rule JSON, and temporary Tensor config overrides.
+
+### Integrated Composition Flow
+
+The `:compose` command calls into `24.py` in-process. It supports compose config loading, dotted config overrides, category/register/ref filters, value regex, pointer source modes, pointer filters, pointer uniqueness, entry templates, and join strings.
+
+## Purpose in the Codebase
+
+`25.py` is the operational host that makes the text-digestion and export pipeline interactive. It is the place where structured Tensor data can be loaded, generated from arbitrary text, edited, resolved, filtered, and composed without leaving one REPL session.
+
+## Inputs
+
+- Tensor-compatible files.
+- JSON/CSV records.
+- REPL commands.
+- Arbitrary text files via `:digest`.
+- Inline text via `:digest-text`.
+- Compose configuration files and command overrides.
+
+## Outputs
+
+- Terminal summaries/search results/renderings.
+- Workspace export files.
+- Reformatted compose exports.
+- Saved configuration JSON.
+
+## Practical Role
+
+Use `25.py` as the main Tensor workspace shell. It is broader than `23.py` and `24.py` individually because it can host their digestion/export flows while also providing editing, resolving, searching, pipelines, and ordinary workspace import/export.
+
+---
+
 # Cross-File Evolution Map
 
 ## Stage 1 — Clear C Baseline
@@ -2581,6 +3095,22 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 
 `21.md` is the comprehensive final prompt that specifies the current `16.cpp` implementation requirements, including BigUInt/BigInt support, strict validation, seed rank/unrank, output formats, and self-tests.
 
+## Stage 25 — Terminal Basis-Tensor REPL
+
+`22.py` turns the finite basis-tensor seed workflow into a command-line REPL with config/seed loading, raw/residue tables, residue grids, `20.txt`-style export, JSON save, script execution, and optional compile/self-test helpers for `16.cpp`.
+
+## Stage 26 — Text-to-Tensor Digestion
+
+`23.py` takes arbitrary text or code-like input and digests it into Tensor-compatible categorized records with metadata, dedupe controls, pointer generation, and multiple output formats.
+
+## Stage 27 — Tensor-to-Reformatted-Text Composition
+
+`24.py` consumes formatted Tensor data, filters and transforms entries, follows pointer relationships when requested, and renders custom or Tensor-compatible export files.
+
+## Stage 28 — Integrated Tensor REPL Process Host
+
+`25.py` provides the full Tensor workspace REPL and embeds the `23.py` digestion and `24.py` composition flows as first-class commands through `:digest`, `:digest-text`, and `:compose`.
+
 ---
 
 # Functional Classification Table
@@ -2611,6 +3141,10 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 | `19.txt` | Seed input file | Provide seed records `0`, `1`, and `[1, 1]` | Deterministic input sequence for seed-build mode |
 | `20.txt` | Seed-build output file | Present reconstructed basis blocks from `17.txt` and `19.txt` | Parse-observable audit/output artifact |
 | `21.md` | Final implementation prompt | Specify the full C++17 basis-tensor generator requirements | Source prompt for `16.cpp` |
+| `22.py` | Basis-tensor terminal REPL | Load configs/seeds, build tensor blocks, inspect tables/grids, export `20.txt`-style text, save JSON, run scripts | Scriptable terminal control surface for the finite basis-tensor workflow |
+| `23.py` | Text-to-Tensor digester | Segment arbitrary text into categorized Tensor workspace entries with dedupe and pointer metadata | Convert loose text/code into addressable Tensor records |
+| `24.py` | Tensor compose/export tool | Load formatted Tensor data, filter/transform/select entries, follow pointers, render templates or standard formats | Export curated reformatted text/data from Tensor workspaces |
+| `25.py` | Integrated Tensor REPL | Parse/load/edit/resolve/render Tensor workspaces and run `23.py`/`24.py` flows in-process | Main operational shell for Tensor workspace digestion, editing, and composition |
 
 ---
 
@@ -2631,6 +3165,10 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 - `16.cpp` uses only the C++17 standard library and deliberately avoids Boost, GMP, external JSON libraries, and nonstandard dependencies.
 - `17.txt`, `19.txt`, and `20.txt` are configuration/input/output text artifacts for `16.cpp`; they have no runtime dependency by themselves.
 - `17_tutorial.md`, `18.md`, and `21.md` are Markdown documentation or prompt artifacts with no runtime dependency.
+- `22.py`, `23.py`, `24.py`, and `25.py` use only Python standard libraries for their core behavior.
+- `22.py` can optionally invoke a system C++ compiler and the compiled `basis_tensor` executable through its `compile16` and `selftest16` REPL commands.
+- `24.py` depends conceptually on `23.py`/`format_paste` models; when `format_paste` is not importable, it falls back to loading local `23.py`.
+- `25.py` can run independently for ordinary Tensor parsing/rendering, but its `:digest`, `:digest-text`, and `:compose` commands require local `23.py` and `24.py`.
 
 ## Build/Run Summary
 
@@ -2697,6 +3235,21 @@ c++ -std=c++17 -Wall -Wextra -pedantic -O2 16.cpp -o basis_tensor
 
 # Basis-tensor documentation and prompt artifacts
 # 17_tutorial.md, 18.md, and 21.md are read as static Markdown references.
+
+# Terminal basis-tensor REPL
+python 22.py --self-check
+python 22.py --config 17.txt --seed-file 19.txt --batch -c "build-seeds" -c "summary"
+
+# Text-to-Tensor digestion
+python 23.py --input notes.md --format json_workspace --output tensor-workspace.json
+python 23.py --text "Hello world." --categories paragraph,sentence,word,pointer
+
+# Tensor composition/export
+python 24.py --input tensor-workspace.json --input-format json_workspace --format custom --category word --entry-template "{value}" --join " "
+
+# Integrated Tensor REPL/process host
+python 25.py --run ":digest 21.md --categories paragraph,sentence,word,pointer" --run ":summary"
+python 25.py --run ":digest-text --categories word --no-pointers -- Alpha beta." --run ":compose - custom --category word --entry-template {value} --join ,"
 ```
 
 ---
@@ -2713,7 +3266,7 @@ bounded symbolic input space
     -> file, REPL, colour, API, GUI, render, bundle, export, axiom, tensor, image-text, or reconstruction representation
 ```
 
-In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed and tensor-semantic conceptual source. In `13.py`, `14.py`, and `15.py`, it is a square image transformed into indexed pixel text and reconstructed back into image form. In `16.cpp`, `17.txt`, `19.txt`, and `20.txt`, it is finite alphabet-constrained text transformed into raw tensor rows, residue tensor rows, exact basis addresses, and deterministic seed reconstructions. In `PowerShell_Workstation_profile.ps1`, the pattern becomes shell-level orchestration: bounded commands, validation wrappers, canonical helper names, and operational output. In `18.md`, `21.md`, and `17_tutorial.md`, the pattern is captured as prompt/specification/tutorial text that governs and explains the implementation.
+In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed and tensor-semantic conceptual source. In `13.py`, `14.py`, and `15.py`, it is a square image transformed into indexed pixel text and reconstructed back into image form. In `16.cpp`, `17.txt`, `19.txt`, and `20.txt`, it is finite alphabet-constrained text transformed into raw tensor rows, residue tensor rows, exact basis addresses, and deterministic seed reconstructions. In `22.py`, the same basis-tensor workflow becomes a scriptable terminal REPL. In `23.py`, `24.py`, and `25.py`, arbitrary text becomes categorized Tensor records, selected Tensor records become reformatted exports, and the whole process is hosted by an integrated workspace REPL. In `PowerShell_Workstation_profile.ps1`, the pattern becomes shell-level orchestration: bounded commands, validation wrappers, canonical helper names, and operational output. In `18.md`, `21.md`, and `17_tutorial.md`, the pattern is captured as prompt/specification/tutorial text that governs and explains the implementation.
 
 ---
 
@@ -2747,6 +3300,10 @@ The uploaded filenames can be mapped to descriptive project names as follows:
 | `19.txt` | `basis_tensor_seed_records.txt` |
 | `20.txt` | `basis_tensor_seed_build_output.txt` |
 | `21.md` | `basis_tensor_final_prompt.md` |
+| `22.py` | `basis_tensor_terminal_repl.py` |
+| `23.py` | `format_paste.py` |
+| `24.py` | `compose_tensor_export.py` |
+| `25.py` | `integrated_tensor_repl.py` |
 
 ---
 
@@ -2777,3 +3334,11 @@ The uploaded filenames can be mapped to descriptive project names as follows:
 23. Preserve the distinction in `16.cpp` documentation and outputs between `B_raw`, `B_residue`, and seed metadata. The seed sequence addresses `B_raw`; it is not a tensor coordinate.
 24. Treat `18.md` as historical prompt-development context and `21.md` as the final implementation prompt for the current `16.cpp`.
 25. Keep `PowerShell_Workstation_profile.ps1` local-overlay friendly: workstation-specific secrets, cloud settings, and machine-specific overrides should stay outside the main profile body where possible.
+26. Keep `22.py` aligned with `16.cpp`, `17.txt`, `19.txt`, and `20.txt`; if seed decoding, row ranking, residue handling, or Structure-1 metadata changes in the compiled generator, update the REPL engine and self-check expectations.
+27. Use `22.py` when the basis-tensor workflow needs repeatable command scripts, terminal tables, residue grids, or JSON exports without launching a GUI.
+28. Keep `23.py` category/register mappings compatible with the Tensor config used by `25.py`; changing default registers or metadata keys affects downstream compose filters.
+29. Preserve `23.py` non-entry-duplication behavior when adding new segmenters or custom extractors so repeated text does not accidentally overwrite distinct Tensor records.
+30. Keep `24.py` synchronized with `23.py` workspace dictionaries and metadata conventions, especially `category`, `key`, `parent_key`, pointer fields, and ancestor metadata.
+31. Use `24.py` for curated exports where filters, pointer-source modes, transforms, templates, or plugins are needed beyond the basic `25.py :export` command.
+32. Keep `25.py`'s `:digest`, `:digest-text`, and `:compose` commands synchronized with the CLI option surfaces of `23.py` and `24.py`.
+33. When editing `25.py`, run `python -m py_compile 25.py` and smoke-test at least one digestion flow plus one compose flow.
