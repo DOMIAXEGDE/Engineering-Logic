@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "instance_count": 2,
+  "components": {
+    "p": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "signed_mapping": "zigzag" },
+    "q": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "positive_mapping": "id_plus_one" },
+    "m": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "signed_mapping": "zigzag" },
+    "g": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "positive_mapping": "id_plus_one" },
+    "alpha": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "signed_mapping": "zigzag" },
+    "beta": { "alphabet": "01", "length": { "mode": "fixed", "value": 1 }, "positive_mapping": "id_plus_one" }
+  },
+  "seed": {
+    "output_length": 2,
+    "seed_file": "19.txt",
+    "basis_output_path": "20.txt",
+    "mode": "strict",
+    "basis_policy": "ordered_with_repetition",
+    "emit_generated_seed": true
+  },
+  "output": {
+    "format": "json",
+    "path": "basis_tensors.json"
+  }
+}

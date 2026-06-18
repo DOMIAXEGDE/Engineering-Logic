@@ -6,6 +6,8 @@ Updated on 2026-06-08 to include detailed documentation for `9.py`, `10.py`, `11
 
 Updated on 2026-06-16 to incorporate the revised `12.md` and add detailed documentation for `13.py`, `14.py`, and `15.py`.
 
+Updated on 2026-06-18 to include `PowerShell_Workstation_profile.ps1`, the completed deterministic basis-tensor implementation `16.cpp`, its runnable `17.txt`/`19.txt`/`20.txt` seed workflow artifacts, the tutorial `17_tutorial.md`, and the prompt-source documents `18.md` and `21.md`.
+
 This dictionary is a static source-code description. The code was inspected as text; the programs were not executed. The purpose of this file is to name each uploaded code file, identify its internal form, describe its functionality, and state its role within the larger generative/configurational system.
 
 ## Source File Inventory
@@ -28,22 +30,33 @@ This dictionary is a static source-code description. The code was inspected as t
 | `13.py` | 241 | 6,991 | `a8df62d4fadb` |
 | `14.py` | 226 | 6,481 | `6924350e2630` |
 | `15.py` | 303 | 8,883 | `8906ef7e81ec` |
+| `PowerShell_Workstation_profile.ps1` | 1,528 | 56,792 | `34796b322137` |
+| `16.cpp` | 2,112 | 86,282 | `3018341b789e` |
+| `17.txt` | 24 | 1,004 | `295213a3a8fb` |
+| `17_tutorial.md` | 943 | 20,104 | `0b7b3bfea69d` |
+| `18.md` | 832 | 52,248 | `99776b559848` |
+| `19.txt` | 3 | 12 | `cee5cc676160` |
+| `20.txt` | 159 | 6,208 | `013bca8f00ce` |
+| `21.md` | 479 | 30,850 | `14371ec2babc` |
 
 Note: `15.py` was uploaded in this update batch as `15(2).py`; this dictionary uses the requested canonical name `15.py`.
 
 ## System-Level Reading
 
-The uploaded files form seven related layers:
+The uploaded files form ten related layers:
 
 1. **Permutation and record-generation layer** — `1.c`, `2.c`, `3.c`, `4.cpp`, `5.cpp`, and `6.cpp` generate combinations, source records, or configurable fabric outputs.
 2. **Boolean-function colour encoding layer** — `0.py` gives a canonical truth-table-to-colour system for Boolean logic gates, circuits, and transition machines.
 3. **Interactive command/OS layer** — `7.php` and `8.py` are REPL-oriented systems for n-dimensional fabric analysis and graphical kernel-service control.
 4. **General-dimensional circuit/category/rendering layer** — `9.py` extends accepted-state colour-index tensors into deterministic n-dimensional circuit events, semantic free-category presentations, projections, fabric reports, and optional rendered outputs.
 5. **Documentation bundle and restoration layer** — `10.py` bundles a project tree into `doc/doc.md`, while `11.py` reverses that bundle back into a recoverable file tree where the original text content is embedded.
-6. **Axiomatic conceptual-source and tensor-semantics layer** — the revised `12.md` supplies Heaven/Tensor definitions, the `The Elements` axiom set, Structure 1 scalar generation, Structure 2 tensor-network interpretation, and short closure fragments related to self-control, tensor action, tautology, and tensor renormalization.
-7. **Square-image value extraction and reconstruction layer** — `13.py`, `14.py`, and `15.py` form a GUI pipeline for converting square images into indexed RGB/HEX text sequences and reconstructing square RGB images from those sequences.
+6. **Axiomatic conceptual-source and tensor-semantics layer** - the revised `12.md` supplies Heaven/Tensor definitions, the `The Elements` axiom set, Structure 1 scalar generation, Structure 2 tensor-network interpretation, and short closure fragments related to self-control, tensor action, tautology, and tensor renormalization.
+7. **Square-image value extraction and reconstruction layer** - `13.py`, `14.py`, and `15.py` form a GUI pipeline for converting square images into indexed RGB/HEX text sequences and reconstructing square RGB images from those sequences.
+8. **Engineering workstation shell layer** - `PowerShell_Workstation_profile.ps1` defines a PowerShell workstation cockpit with deterministic paths, module/bootstrap helpers, cloud context helpers, HPC/simulation/rendering dispatch functions, AI helper commands, aliases, and a startup pipeline.
+9. **Deterministic basis-tensor and seed-address layer** - `16.cpp`, `17.txt`, `19.txt`, and `20.txt` implement and demonstrate finite raw tensor-row spaces, least-residue tensor datasets, Structure-1 symbolic scalar metadata, exact row/basis ranking, and seed-based reconstruction of `B_raw`.
+10. **Prompt and tutorial layer for basis-tensor generation** - `18.md`, `21.md`, and `17_tutorial.md` record the iterative prompt-specification path and provide a practical tutorial for writing `17.txt` configurations.
 
-The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, an axiomatic/tensor conceptual source, and a square-image analysis/reconstruction toolchain that turns pixel data into inspectable text records.
+The naming pattern shows an evolutionary sequence: a direct C permutation generator, an obfuscated xN-style C variant, a configurable C fabric, safer C++ replacements, symbolic-colour logic encoders, n-dimensional fabric/OS tools, reversible documentation-bundle tooling, an axiomatic/tensor conceptual source, a square-image analysis/reconstruction toolchain, and finally a mathematically stricter basis-tensor seed-address workflow supported by workstation automation.
 
 ---
 
@@ -2016,6 +2029,460 @@ Use this file when indexed pixel text needs to become a square image again. It i
 
 ---
 
+# 17. `PowerShell_Workstation_profile.ps1`
+
+## Internal Identity
+
+- **Language:** PowerShell 7 profile script.
+- **Primary form:** Interactive shell/workstation bootstrap profile.
+- **Architectural form:** Guarded startup script composed of environment setup, module bootstrap helpers, shell UI functions, cloud context bindings, HPC/simulation/rendering dispatchers, maintenance utilities, container helpers, AI helper wrappers, aliases, and a local overlay loader.
+
+## Main Purpose
+
+`PowerShell_Workstation_profile.ps1` turns a PowerShell session into an engineering workstation cockpit. It creates deterministic workspace paths, initializes optional modules, configures ReadLine and prompt behavior, tracks active cloud context, and exposes short commands for common workstation tasks.
+
+The profile is deliberately defensive: it avoids global strict-mode changes, checks whether commands and modules exist before invoking them, and treats cloud/HPC/rendering operations as dispatch surfaces that validate and record intent before delegating to real CLIs where available.
+
+## Structural Sections
+
+The script is organized into numbered blocks:
+
+- **Guardrails** - preserves interactive behavior and avoids globally disruptive profile settings.
+- **Deterministic paths and environment variables** - sets workstation roots, cache paths, config paths, and PATH entries.
+- **Core utilities** - path resolution, single-quoted shell formatting, command checks, native invocation wrappers, module import/install helpers.
+- **Secret store bindings** - initializes and reads/writes a workstation secret vault when SecretManagement is available.
+- **UI enhancements and prompt** - configures PSReadLine, cloud summary state, git branch display, prompt text, and startup banner.
+- **Cloud bindings** - helper functions for Azure, AWS, and GCP connection/context inspection.
+- **HPC and cloud job orchestration** - creates job manifests, dispatches local jobs and cloud batch jobs, and gives status/stop wrappers.
+- **Simulation, rendering, and scientific pipeline functions** - higher-level commands for simulation submission, render jobs, render farms, scientific pipelines, and GPU-cluster status.
+- **Daily automation and development session functions** - workstation tests, lint/test/documentation commands, project sync, backups, reports, maintenance, and engineering session startup.
+- **Container and AI helper layer** - container task/status helpers and `Invoke-AICompletion`, `Invoke-AIExplain`, `Invoke-AIPlan`, and `Invoke-AIRefactor` wrappers.
+- **Startup pipeline and local overlay** - initializes the profile and imports local user overrides.
+
+## Functional Role
+
+The profile gives the repository a shell-facing operational layer. While most numbered source files define generators, analyzers, documents, or reconstruction tools, this profile defines the interactive environment from which those tools can be run, tested, documented, backed up, and connected to external execution surfaces.
+
+## Notable Aliases
+
+- `ws-test` -> `Test-Workstation`
+- `ws-report` -> `Generate-Reports`
+- `ws-maintain` -> `Invoke-DailyMaintenance`
+- `hpc` -> `Start-HPCJob`
+- `sim` -> `Submit-Simulation`
+- `render` -> `Start-RenderJob`
+- `gpu-status` -> `Get-GPUClusterStatus`
+
+## Inputs
+
+- User shell environment.
+- Workstation path variables.
+- Optional cloud CLI state for Azure, AWS, and GCP.
+- Optional local overlay profile.
+- Optional AI endpoint/model environment variables.
+
+## Outputs
+
+- Mutated process/user environment variables.
+- Prompt and banner text.
+- Job manifests and command dispatch output.
+- Reports, backups, docs, and maintenance output when the corresponding helper functions are called.
+
+## Practical Role
+
+Use this profile as the local command cockpit for the broader project. It is not part of the mathematical tensor generator itself, but it provides the shell automation layer in which compilation, testing, seed runs, reports, and maintenance can be made repeatable.
+
+---
+
+# 18. `16.cpp`
+
+## Internal Identity
+
+- **Language:** Standard C++17.
+- **Primary form:** Single-file CLI program.
+- **Compiled target:** `basis_tensor`.
+- **Architectural form:** Self-contained deterministic basis-tensor generator with minimal arbitrary-size integer arithmetic, strict JSON parsing, component encoders, Structure-1 scalar metadata, seed rank/unrank logic, normal generation mode, seed-build mode, and built-in self-tests.
+
+## Main Purpose
+
+`16.cpp` converts six user-provided component strings per instance into:
+
+- `B_raw`, a reconstruction-addressed raw-id tensor dataset;
+- `B_residue`, a least-residue tensor dataset;
+- symbolic Structure-1 scalar metadata;
+- deterministic seed metadata that ranks and reconstructs `B_raw`.
+
+It is intentionally finite and exact. A finite `17.txt` configuration defines a finite raw row universe and a finite basis-address space. The seed layer is an exact rank/unrank addressing mechanism, not a pseudorandom generator and not a claim to generate uncountable objects exactly.
+
+## Mathematical Model
+
+The six components are ordered:
+
+```text
+p, q, m, g, alpha, beta
+```
+
+Each component has:
+
+- a finite ordered alphabet;
+- a fixed or variable byte-length policy;
+- a raw domain size `M_c`;
+- an optional residue modulus `mu_c`.
+
+For fixed-length components, the id is the big-endian ordinal of the string over the component alphabet.
+
+For variable-length components, the id is the fixed-length ordinal plus an offset for all shorter valid lengths, so strings of different valid lengths do not collide.
+
+The Structure-1 scalar form is:
+
+```text
+a_i = (P_i / Q_i) * ((M_i / G_i) ^ (Alpha_i / Beta_i))
+```
+
+Raw ids for `p`, `m`, and `alpha` map through zigzag signed integer mapping. Raw ids for `q`, `g`, and `beta` map to positive integers by `raw_id + 1`.
+
+## Seed Addressing
+
+The raw row universe has size:
+
+```text
+R = M_p * M_q * M_m * M_g * M_alpha * M_beta
+```
+
+For basis row count `N`, the ordered-with-repetition basis-address space has size:
+
+```text
+S = R^N
+```
+
+`16.cpp` ranks each raw row by mixed-radix big-endian ranking, ranks a full `B_raw` dataset by base-`R` big-endian ranking, and encodes the resulting basis address as a canonical seed sequence of length 1 through 6.
+
+Seed-build mode reads seed records from `19.txt`, decodes addresses, unpacks row ordinals, reconstructs canonical component strings, and emits `20.txt`.
+
+## Major Internal Components
+
+- `BigUInt` - base-1e9 arbitrary-size nonnegative integer class.
+- `BigInt` - sign plus `BigUInt` magnitude for zigzag-mapped signed parameters.
+- `JsonParser` - strict parser sufficient for the supported configuration format.
+- `ComponentSpec` / `ComponentValue` - alphabet, length policy, domain, modulus, encoded value, and match-paste metadata.
+- `ScalarInfo` - mapped Structure-1 parameters, reduced exponent, symbolic expression, and real-admissibility status.
+- Rank/unrank helpers for raw rows, basis addresses, and seed sequences.
+- JSON/text output renderers.
+- Seed-file parsing and seed-build output generation.
+- `runSelfTests()` built-in verification suite.
+
+## CLI Surface
+
+Supported options include:
+
+- `--help`
+- `--config <path>`
+- `--instances <N>`
+- `--out <path>`
+- `--interactive`
+- `--sample-config`
+- `--validate-only`
+- `--json`
+- `--text`
+- `--from-seeds`
+- `--seed-file <path>`
+- `--basis-out <path>`
+- `--seed-length <1|2|3|4|5|6>`
+- `--seed-mode <strict|wrap>`
+- `--write-seed-file <path>`
+- `--append-seed-file`
+- `--self-test`
+- `--timestamp`
+- `--approx-digits <D>`
+- `--instance-file <path>`
+
+## Inputs
+
+- JSON configuration from `17.txt` or another `--config` path.
+- Inline instances, `--instance-file`, or interactive pasted strings in normal mode.
+- Seed sequences from `19.txt` or another `--seed-file` path in seed-build mode.
+
+## Outputs
+
+- Parse-observable JSON or human-readable text in normal generation mode.
+- Optional generated seed file compatible with `19.txt`.
+- Human-readable seed-build output compatible with `20.txt`.
+- Built-in self-test status.
+
+## Practical Role
+
+`16.cpp` is the concrete implementation that operationalizes the mathematical prompt in `21.md`. It is the bridge from the conceptual Structure-1 scalar/tensor language in `12.md` and `18.md` into an exact finite configuration-and-seed workflow.
+
+---
+
+# 19. `17.txt`
+
+## Internal Identity
+
+- **Format:** Strict JSON.
+- **Primary form:** Seed-only basis-tensor configuration.
+- **Runtime role:** Default configuration file for `basis_tensor`.
+
+## Main Purpose
+
+`17.txt` defines a tiny finite tensor-row universe for `16.cpp`. It contains six binary components, each with alphabet `"01"` and fixed byte length `1`, and sets `instance_count` to `2`.
+
+Because every component has raw domain size 2, the raw row-space size is:
+
+```text
+R = 2^6 = 64
+```
+
+With `N = 2`, the basis-address-space size is:
+
+```text
+S = 64^2 = 4096
+```
+
+## Configuration Contents
+
+The file defines:
+
+- `version: 1`
+- `instance_count: 2`
+- binary fixed-length components for `p`, `q`, `m`, `g`, `alpha`, and `beta`
+- signed mapping markers for `p`, `m`, and `alpha`
+- positive mapping markers for `q`, `g`, and `beta`
+- seed output length `2`
+- seed file path `19.txt`
+- seed-build output path `20.txt`
+- strict seed mode
+- `ordered_with_repetition` basis policy
+- JSON output target `basis_tensors.json`
+
+## Notable Property
+
+This `17.txt` does not include inline instances. It is designed for seed-build mode:
+
+```powershell
+.\basis_tensor --config 17.txt --from-seeds
+```
+
+The seed records in `19.txt` determine which ordered raw basis tensor datasets are reconstructed.
+
+---
+
+# 20. `17_tutorial.md`
+
+## Internal Identity
+
+- **Format:** Markdown.
+- **Primary form:** Human tutorial and reference for writing `17.txt`.
+- **Runtime role:** Documentation only; not consumed directly by `basis_tensor`.
+
+## Main Purpose
+
+`17_tutorial.md` is a comprehensive guide for creating valid JSON `17.txt` files. It explains the configuration anatomy, gives runnable examples, describes normal generation and seed-build workflows, and documents validation errors and best practices.
+
+## Major Topics
+
+- Fast-start compile and run commands.
+- The distinction between `B_raw`, `B_residue`, and seed metadata.
+- JSON skeleton and required fields.
+- Fixed-length and variable-length component policies.
+- The six Structure-1 slots.
+- Zigzag signed mapping and `raw_id + 1` positive mapping.
+- Optional residue moduli and collision implications.
+- Inline instances.
+- Seed section fields.
+- Strict and wrap seed modes.
+- `19.txt` seed-file syntax.
+- Output section configuration.
+- Normal generation workflow.
+- Seed-build workflow.
+- Minimal tiny configuration.
+- Variable-length and alternate-modulus examples.
+- Real-admissibility status notes.
+- Common commands.
+- Validation checklist.
+- Troubleshooting.
+- Seed-only `17.txt` template.
+
+## Practical Role
+
+Use this document when authoring or reviewing `17.txt`. It keeps explanatory prose out of the JSON configuration while still making the workflow discoverable and reproducible.
+
+---
+
+# 21. `18.md`
+
+## Internal Identity
+
+- **Format:** Markdown prompt-development document.
+- **Primary form:** Iterative specification for creating `16.cpp`.
+- **Conceptual role:** Bridges Structure-1 scalar ideas, match-paste encoding, least-residue tensors, and seed-address requirements.
+
+## Main Purpose
+
+`18.md` starts from an informal Structure-1 expression and asks for a mathematically precise prompt to generate `16.cpp`. It tightens the original idea into deterministic component alphabets, ordinal string ids, least-residue coordinates, raw tensor rows, Structure-1 parameter mapping, real-admissibility classification, and a deterministic seed-address layer.
+
+## Content Structure
+
+The document includes:
+
+- the original scalar expression and problem statement;
+- commentary explaining why the prompt needs finite alphabets, explicit moduli, and deterministic ids rather than arbitrary hashes;
+- a long improved prompt for `16.cpp`;
+- a later “Finalized Prompt” section with additional edits;
+- seed-layer requirements for `17.txt`, `19.txt`, and `20.txt`;
+- arbitrary-size integer requirements;
+- self-test requirements;
+- warnings against conflating finite enumeration with exact uncountable generation.
+
+## Relationship to `21.md`
+
+`18.md` is an intermediate prompt-engineering artifact. `21.md` is the later, more complete prompt that was executed to produce `16.cpp`. The strongest conceptual continuity is the insistence on:
+
+- finite configured alphabets;
+- deterministic ranking/unranking;
+- least-residue clarity;
+- Structure-1 symbolic values;
+- exact seed reconstruction semantics.
+
+---
+
+# 22. `19.txt`
+
+## Internal Identity
+
+- **Format:** Plain text seed-file input.
+- **Primary form:** Three seed records.
+- **Runtime role:** Default seed input for `basis_tensor --from-seeds`.
+
+## Contents
+
+```text
+0
+1
+[1, 1]
+```
+
+## Main Purpose
+
+`19.txt` asks `16.cpp` to reconstruct three ordered raw basis tensor datasets under the finite universe defined by `17.txt`.
+
+For the current `17.txt`, `R = 64` and `N = 2`, so `S = 4096`.
+
+The seed records mean:
+
+- `0` - length-1 seed with radix `4096`, effective address `0`, row ordinals `[0, 0]`.
+- `1` - length-1 seed with radix `4096`, effective address `1`, row ordinals `[0, 1]`.
+- `[1, 1]` - length-2 seed with radix `64`, decoded address `65`, row ordinals `[1, 1]`.
+
+## Practical Role
+
+Use this file as the smallest readable demonstration of the seed-address layer: multiple seed records, multiple seed lengths, strict mode, and deterministic reconstruction order.
+
+---
+
+# 23. `20.txt`
+
+## Internal Identity
+
+- **Format:** Human-readable and parse-observable text output.
+- **Primary form:** Seed-build result generated from `17.txt` and `19.txt`.
+- **Runtime role:** Default seed-build output path for `basis_tensor --from-seeds`.
+
+## Main Purpose
+
+`20.txt` records the deterministic reconstruction of three basis blocks from the seed records in `19.txt`.
+
+The header states:
+
+- configuration path `17.txt`;
+- component order `p, q, m, g, alpha, beta`;
+- byte-symbol mode;
+- basis policy `ordered_with_repetition`;
+- strict seed mode;
+- basis row count `N = 2`;
+- raw row-space size `R = 64`;
+- basis-address-space size `S = 4096`;
+- component domain sizes and residue moduli;
+- encountered seed radices for `k = 1` and `k = 2`.
+
+## Basis Blocks
+
+The file contains three delimited basis blocks:
+
+- block 0 from seed line `0`, effective address `0`, row ordinals `[0, 0]`;
+- block 1 from seed line `1`, effective address `1`, row ordinals `[0, 1]`;
+- block 2 from seed line `[1, 1]`, effective address `65`, row ordinals `[1, 1]`.
+
+Each block includes:
+
+- source seed line and parsed sequence;
+- seed length and radix;
+- decoded and effective basis addresses;
+- wrapping status;
+- row ordinals;
+- canonical component strings;
+- raw ids;
+- residue moduli;
+- least residues;
+- mapped Structure-1 parameters;
+- symbolic scalar expression;
+- real-admissibility status;
+- `B_raw`;
+- `B_residue`;
+- a parse-observable JSON block.
+
+## Practical Role
+
+`20.txt` is the concrete output evidence for the `17.txt` + `19.txt` seed workflow. It is useful for downstream parsers, audits, and tutorial examples because it shows all reconstruction fields explicitly.
+
+---
+
+# 24. `21.md`
+
+## Internal Identity
+
+- **Format:** Markdown prompt document.
+- **Primary form:** Final implementation prompt for `16.cpp`.
+- **Execution role:** The requested prompt that generated the current `16.cpp`.
+
+## Main Purpose
+
+`21.md` is the comprehensive final specification for a deterministic basis-tensor generator. It requires a complete single-file standard C++17 program named `16.cpp` and defines the mathematical, input, output, seed, validation, and self-test obligations.
+
+## Major Requirements Captured
+
+- Use Structure-1 scalar form:
+
+```text
+a_i = (p / q) * ((m / g) ^ (alpha / beta))
+```
+
+- Treat `p`, `m`, and `alpha` as signed integer slots via zigzag mapping.
+- Treat `q`, `g`, and `beta` as positive denominator slots via `raw_id + 1`.
+- Encode six user strings by deterministic match-paste ordinal encoding.
+- Support fixed and variable byte-length policies.
+- Produce both `B_raw` and `B_residue`.
+- Keep raw ids separate from least residues.
+- Classify real-admissibility exactly at the symbolic rational level.
+- Implement arbitrary-size integer arithmetic without Boost/GMP.
+- Rank and unrank raw tensor rows.
+- Rank and unrank ordered `B_raw` datasets.
+- Compute exact seed radices by integer kth-root ceiling for seed lengths 1 through 6.
+- Read seed sequences from `19.txt` in strict or wrap mode.
+- Write seed-build output to `20.txt`.
+- Support normal generation, interactive input, JSON/text output, seed writing, validation-only mode, sample config mode, and self-tests.
+- State finite-address-space limits clearly and avoid claims of exact uncountable generation.
+
+## Relationship to Other Files
+
+`21.md` is the direct specification source for `16.cpp`.
+
+`17.txt`, `19.txt`, and `20.txt` are the runnable demonstration artifacts for the workflow described in the prompt.
+
+`17_tutorial.md` is the practical tutorial layer that explains how to author configurations for the implemented program.
+
+---
+
 # Cross-File Evolution Map
 
 ## Stage 1 — Clear C Baseline
@@ -2082,6 +2549,38 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 
 `15.py` parses indexed RGB/HEX pixel files, validates index continuity and square pixel count, reconstructs an RGB image, and saves `reconstructed_image.png`.
 
+## Stage 17 — Engineering Workstation Shell Profile
+
+`PowerShell_Workstation_profile.ps1` supplies the interactive PowerShell cockpit for deterministic paths, module bootstrap, shell UI, cloud context, HPC/simulation/render dispatch, daily maintenance, container helpers, and AI helper wrappers.
+
+## Stage 18 — Deterministic Basis-Tensor Generator
+
+`16.cpp` implements finite alphabet/length-policy tensor coordinate encoding, raw and least-residue datasets, Structure-1 scalar metadata, exact big-integer row/basis ranking, canonical seed encoding, and seed-file reconstruction.
+
+## Stage 19 — Seed-Only Basis-Tensor Configuration
+
+`17.txt` defines a tiny binary fixed-length component universe with `N = 2`, strict seed mode, `ordered_with_repetition`, `19.txt` as seed input, and `20.txt` as seed-build output.
+
+## Stage 20 — Basis-Tensor Configuration Tutorial
+
+`17_tutorial.md` explains how to write valid `17.txt` configurations, how normal and seed-build workflows differ, and how `B_raw`, `B_residue`, and seed metadata should be interpreted.
+
+## Stage 21 — Intermediate Basis-Tensor Prompt Development
+
+`18.md` records the prompt-refinement path from Structure-1 scalar generation and match-paste ids toward a rigorous finite basis-tensor and seed-address specification.
+
+## Stage 22 — Seed Sequence Input
+
+`19.txt` gives three seed records that exercise length-1 and length-2 seed decoding against the current `17.txt` finite address space.
+
+## Stage 23 — Seed-Build Output
+
+`20.txt` records the reconstructed basis blocks produced from `17.txt` and `19.txt`, including row ordinals, canonical component strings, raw ids, residues, Structure-1 symbolic expressions, and parse-observable JSON blocks.
+
+## Stage 24 — Final Basis-Tensor Implementation Prompt
+
+`21.md` is the comprehensive final prompt that specifies the current `16.cpp` implementation requirements, including BigUInt/BigInt support, strict validation, seed rank/unrank, output formats, and self-tests.
+
 ---
 
 # Functional Classification Table
@@ -2104,6 +2603,14 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 | `13.py` | Greyscale square-image analyzer | Convert square images to greyscale and export indexed RGB/HEX pixel text | Deterministic greyscale image-to-text extraction |
 | `14.py` | Multi-colour square-image analyzer | Convert square images to RGB and export indexed RGB/HEX pixel text | Deterministic full-colour image-to-text extraction |
 | `15.py` | Multi-colour square-image reconstructor | Parse indexed RGB/HEX pixel text and rebuild a square RGB PNG | Deterministic text-to-image reconstruction |
+| `PowerShell_Workstation_profile.ps1` | Workstation shell profile | Initialize paths, shell UI, module helpers, cloud/HPC/render/simulation commands, maintenance commands, and AI helpers | Interactive engineering cockpit for running and coordinating the project |
+| `16.cpp` | Basis-tensor generator | Encode six component strings into raw/residue tensors, map Structure-1 metadata, rank/unrank rows and basis datasets, and reconstruct from seeds | Exact finite tensor dataset and seed-address workflow |
+| `17.txt` | Basis-tensor JSON configuration | Define six binary fixed-length components, `N = 2`, strict seed settings, and output paths | Small runnable finite universe for seed reconstruction |
+| `17_tutorial.md` | Configuration tutorial | Explain how to author `17.txt`, seed files, normal generation, seed-build mode, and validation rules | Human guide for the basis-tensor workflow |
+| `18.md` | Prompt-development document | Refine the informal basis-tensor idea into a mathematical implementation prompt | Intermediate specification bridge toward `16.cpp` |
+| `19.txt` | Seed input file | Provide seed records `0`, `1`, and `[1, 1]` | Deterministic input sequence for seed-build mode |
+| `20.txt` | Seed-build output file | Present reconstructed basis blocks from `17.txt` and `19.txt` | Parse-observable audit/output artifact |
+| `21.md` | Final implementation prompt | Specify the full C++17 basis-tensor generator requirements | Source prompt for `16.cpp` |
 
 ---
 
@@ -2120,6 +2627,10 @@ The revised `12.md` provides Heaven/Tensor definitions, `The Elements`, Structur
 - `7.php` requires PHP CLI for full REPL behaviour.
 - `9.py` uses standard Python libraries for core JSON/text outputs and optionally uses `qiskit`, `matplotlib`, and `Pillow` for circuit construction and PNG rendering.
 - `12.md` has no runtime dependency.
+- `PowerShell_Workstation_profile.ps1` requires PowerShell 7 for its intended profile behavior and optionally integrates with PSReadLine, SecretManagement, cloud CLIs, container tooling, and AI endpoint environment variables when present.
+- `16.cpp` uses only the C++17 standard library and deliberately avoids Boost, GMP, external JSON libraries, and nonstandard dependencies.
+- `17.txt`, `19.txt`, and `20.txt` are configuration/input/output text artifacts for `16.cpp`; they have no runtime dependency by themselves.
+- `17_tutorial.md`, `18.md`, and `21.md` are Markdown documentation or prompt artifacts with no runtime dependency.
 
 ## Build/Run Summary
 
@@ -2173,6 +2684,19 @@ python 14.py
 
 # Square image reconstructor
 python 15.py
+
+# PowerShell workstation profile
+# Load by placing it in the PowerShell profile path, or dot-source explicitly:
+. .\PowerShell_Workstation_profile.ps1
+
+# Deterministic basis-tensor generator
+c++ -std=c++17 -Wall -Wextra -pedantic -O2 16.cpp -o basis_tensor
+./basis_tensor --self-test
+./basis_tensor --config 17.txt --validate-only
+./basis_tensor --config 17.txt --from-seeds --seed-file 19.txt --basis-out 20.txt
+
+# Basis-tensor documentation and prompt artifacts
+# 17_tutorial.md, 18.md, and 21.md are read as static Markdown references.
 ```
 
 ---
@@ -2189,13 +2713,13 @@ bounded symbolic input space
     -> file, REPL, colour, API, GUI, render, bundle, export, axiom, tensor, image-text, or reconstruction representation
 ```
 
-In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed and tensor-semantic conceptual source. In `13.py`, `14.py`, and `15.py`, it is a square image transformed into indexed pixel text and reconstructed back into image form.
+In the C/C++ layer, the symbolic input space is usually an alphabet and width. In the Python CTCE layer, it is Boolean truth-table behaviour. In the PHP nDCodex layer, it is text/code plus alphabet/dimension/hash-length configuration. In the Tkinter OS layer, it is services, commands, API routes, manifests, quadtree cells, and configurable runtime specs. In `9.py`, it is accepted colour-index state as an n-dimensional tensor that becomes circuits, categories, projections, and fabric reports. In `10.py` and `11.py`, it is a source tree transformed into a reversible Markdown bundle. In `12.md`, it is an axiom-indexed and tensor-semantic conceptual source. In `13.py`, `14.py`, and `15.py`, it is a square image transformed into indexed pixel text and reconstructed back into image form. In `16.cpp`, `17.txt`, `19.txt`, and `20.txt`, it is finite alphabet-constrained text transformed into raw tensor rows, residue tensor rows, exact basis addresses, and deterministic seed reconstructions. In `PowerShell_Workstation_profile.ps1`, the pattern becomes shell-level orchestration: bounded commands, validation wrappers, canonical helper names, and operational output. In `18.md`, `21.md`, and `17_tutorial.md`, the pattern is captured as prompt/specification/tutorial text that governs and explains the implementation.
 
 ---
 
 # Recommended Naming Map
 
-The uploaded numeric filenames can be mapped to descriptive project names as follows:
+The uploaded filenames can be mapped to descriptive project names as follows:
 
 | Uploaded file | Recommended descriptive name |
 |---|---|
@@ -2215,6 +2739,14 @@ The uploaded numeric filenames can be mapped to descriptive project names as fol
 | `13.py` | `square_image_greyscale_analyzer.py` |
 | `14.py` | `square_image_multicolour_analyzer.py` |
 | `15.py` | `square_image_multicolour_reconstructor.py` |
+| `PowerShell_Workstation_profile.ps1` | `engineering_workstation_profile.ps1` |
+| `16.cpp` | `deterministic_basis_tensor_generator.cpp` |
+| `17.txt` | `basis_tensor_seed_config.json` |
+| `17_tutorial.md` | `basis_tensor_config_tutorial.md` |
+| `18.md` | `basis_tensor_prompt_development.md` |
+| `19.txt` | `basis_tensor_seed_records.txt` |
+| `20.txt` | `basis_tensor_seed_build_output.txt` |
+| `21.md` | `basis_tensor_final_prompt.md` |
 
 ---
 
@@ -2238,3 +2770,10 @@ The uploaded numeric filenames can be mapped to descriptive project names as fol
 16. `15.py` can reconstruct greyscale records from `13.py` because those records are still valid RGB/HEX pixel lines.
 17. Keep the `10.py` and `11.py` bundle/export formats synchronized. If the section heading format, file metadata fields, or code-fence rules change in `10.py`, update the parser assumptions in `11.py`.
 18. Keep optional-render dependencies for `9.py` separate from its core text/JSON behaviour so the file remains usable even without Qiskit, matplotlib, or Pillow.
+19. Keep `16.cpp`, `17.txt`, `19.txt`, and `20.txt` synchronized as one workflow: changing component alphabets, length policies, `instance_count`, seed mode, or seed length changes the valid seed-address interpretation.
+20. Use `17_tutorial.md` as the authoring guide for `17.txt`, but do not paste tutorial comments into `17.txt` because JSON comments are invalid.
+21. Treat `19.txt` as input and `20.txt` as generated output. Regenerate `20.txt` after changing `17.txt` or `19.txt`.
+22. When editing `16.cpp`, rerun `c++ -std=c++17 -Wall -Wextra -pedantic -O2 16.cpp -o basis_tensor` and `./basis_tensor --self-test`.
+23. Preserve the distinction in `16.cpp` documentation and outputs between `B_raw`, `B_residue`, and seed metadata. The seed sequence addresses `B_raw`; it is not a tensor coordinate.
+24. Treat `18.md` as historical prompt-development context and `21.md` as the final implementation prompt for the current `16.cpp`.
+25. Keep `PowerShell_Workstation_profile.ps1` local-overlay friendly: workstation-specific secrets, cloud settings, and machine-specific overrides should stay outside the main profile body where possible.

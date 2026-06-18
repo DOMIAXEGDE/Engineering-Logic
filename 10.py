@@ -21,7 +21,7 @@ IGNORE_DIRS = {
     "node_modules", "vendor",
     "venv", ".venv", "__pycache__",
     "dist", "build", "doc_export",
-    ".idea", ".vscode",
+    ".idea", ".vscode", "testbench",
     "doc", ".runtime",  # prevent bundling the bundle output folder itself
 }
 

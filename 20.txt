@@ -1,0 +1,159 @@
+20.txt deterministic seed-build output
+Configuration: 17.txt
+Component order: p, q, m, g, alpha, beta
+Symbol mode: byte-symbol mode; alphabets and input lengths are decoded bytes.
+Basis policy: ordered_with_repetition
+Seed mode: strict
+Basis row count N: 2
+Raw row-space size R: 64
+Basis-address-space size S: 4096
+Timestamps enabled: false
+Component raw domain sizes and residue moduli:
+  p: M_c=2, mu_c=2
+  q: M_c=2, mu_c=2
+  m: M_c=2, mu_c=2
+  g: M_c=2, mu_c=2
+  alpha: M_c=2, mu_c=2
+  beta: M_c=2, mu_c=2
+Seed radices encountered:
+  k=1, W_k=4096
+  k=2, W_k=64
+
+===== BASIS BLOCK 0 =====
+source_seed_line_number: 1
+source_seed_line: 0
+parsed_seed_sequence: [0]
+seed_length: 1
+seed_radix: 4096
+decoded_basis_address_K_seed: 0
+effective_basis_address_K: 0
+seed_wrapped: false
+row_ordinals: [0, 0]
+  Row 0:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="0"
+    raw_ids: [0, 0, 0, 0, 0, 0]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 0]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=1
+    symbolic_scalar_expression: a_0 = (0 / 1) * ((0 / 1) ^ (0 / 1))
+    real_admissibility_status: undefined_real_expression
+  Row 1:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="0"
+    raw_ids: [0, 0, 0, 0, 0, 0]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 0]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=1
+    symbolic_scalar_expression: a_1 = (0 / 1) * ((0 / 1) ^ (0 / 1))
+    real_admissibility_status: undefined_real_expression
+B_raw: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+B_residue: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]]
+seed_sequence_note: seed addresses B_raw and is metadata, not a tensor coordinate.
+
+parse_observable_json_block:
+{
+      "source_seed_sequence": ["0"],
+      "source_seed_line": "0",
+      "source_seed_line_number": "1",
+      "seed_length": "1",
+      "seed_radix": "4096",
+      "decoded_seed_address": "0",
+      "effective_basis_address": "0",
+      "seed_wrapped": false,
+      "row_ordinals": ["0","0"],
+      "canonical_component_strings": [{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"0"},{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"0"}],
+      "raw_basis_tensor_dataset": [["0","0","0","0","0","0"],["0","0","0","0","0","0"]],
+      "residue_basis_tensor_dataset": [["0","0","0","0","0","0"],["0","0","0","0","0","0"]]
+    }
+
+===== BASIS BLOCK 1 =====
+source_seed_line_number: 2
+source_seed_line: 1
+parsed_seed_sequence: [1]
+seed_length: 1
+seed_radix: 4096
+decoded_basis_address_K_seed: 1
+effective_basis_address_K: 1
+seed_wrapped: false
+row_ordinals: [0, 1]
+  Row 0:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="0"
+    raw_ids: [0, 0, 0, 0, 0, 0]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 0]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=1
+    symbolic_scalar_expression: a_0 = (0 / 1) * ((0 / 1) ^ (0 / 1))
+    real_admissibility_status: undefined_real_expression
+  Row 1:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="1"
+    raw_ids: [0, 0, 0, 0, 0, 1]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 1]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=2
+    symbolic_scalar_expression: a_1 = (0 / 1) * ((0 / 1) ^ (0 / 2))
+    real_admissibility_status: undefined_real_expression
+B_raw: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1]]
+B_residue: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1]]
+seed_sequence_note: seed addresses B_raw and is metadata, not a tensor coordinate.
+
+parse_observable_json_block:
+{
+      "source_seed_sequence": ["1"],
+      "source_seed_line": "1",
+      "source_seed_line_number": "2",
+      "seed_length": "1",
+      "seed_radix": "4096",
+      "decoded_seed_address": "1",
+      "effective_basis_address": "1",
+      "seed_wrapped": false,
+      "row_ordinals": ["0","1"],
+      "canonical_component_strings": [{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"0"},{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"1"}],
+      "raw_basis_tensor_dataset": [["0","0","0","0","0","0"],["0","0","0","0","0","1"]],
+      "residue_basis_tensor_dataset": [["0","0","0","0","0","0"],["0","0","0","0","0","1"]]
+    }
+
+===== BASIS BLOCK 2 =====
+source_seed_line_number: 3
+source_seed_line: [1, 1]
+parsed_seed_sequence: [1, 1]
+seed_length: 2
+seed_radix: 64
+decoded_basis_address_K_seed: 65
+effective_basis_address_K: 65
+seed_wrapped: false
+row_ordinals: [1, 1]
+  Row 0:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="1"
+    raw_ids: [0, 0, 0, 0, 0, 1]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 1]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=2
+    symbolic_scalar_expression: a_0 = (0 / 1) * ((0 / 1) ^ (0 / 2))
+    real_admissibility_status: undefined_real_expression
+  Row 1:
+    canonical_component_strings: p="0", q="0", m="0", g="0", alpha="0", beta="1"
+    raw_ids: [0, 0, 0, 0, 0, 1]
+    residue_moduli: [2, 2, 2, 2, 2, 2]
+    least_residues: [0, 0, 0, 0, 0, 1]
+    mapped_structure1_parameters: P=0, Q=1, M=0, G=1, Alpha=0, Beta=2
+    symbolic_scalar_expression: a_1 = (0 / 1) * ((0 / 1) ^ (0 / 2))
+    real_admissibility_status: undefined_real_expression
+B_raw: [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1]]
+B_residue: [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1]]
+seed_sequence_note: seed addresses B_raw and is metadata, not a tensor coordinate.
+
+parse_observable_json_block:
+{
+      "source_seed_sequence": ["1","1"],
+      "source_seed_line": "[1, 1]",
+      "source_seed_line_number": "3",
+      "seed_length": "2",
+      "seed_radix": "64",
+      "decoded_seed_address": "65",
+      "effective_basis_address": "65",
+      "seed_wrapped": false,
+      "row_ordinals": ["1","1"],
+      "canonical_component_strings": [{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"1"},{"p":"0","q":"0","m":"0","g":"0","alpha":"0","beta":"1"}],
+      "raw_basis_tensor_dataset": [["0","0","0","0","0","1"],["0","0","0","0","0","1"]],
+      "residue_basis_tensor_dataset": [["0","0","0","0","0","1"],["0","0","0","0","0","1"]]
+    }
+
